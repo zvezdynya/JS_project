@@ -9,25 +9,35 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <title>Yummy!</title>
 </head>
+
 <body>
     <!-- Шахноз начало-->
     <header></header>
     <!-- Шахноз конец-->
     <main>
-        <!-- Анна инпуты начало-->
-        <div class="inputs__wrapper"></div>
-        <!-- Анна инпуты конец-->
+        <form method="get">
+            <input name="search" placeholder="What do you want to cook?" type="search">
+            <button type="submit">></button>
+            <div class="inputs__wrapper">Specify additional parameters for the search:</div>
+            <label>
+                <input type="checkbox">Vegan
+                <input type="checkbox">Low - calorie
+                <input type="checkbox">Gluten Free
+                <input type="checkbox">Sugar Free
+                <input type="checkbox">Healthy nutrition
+            </label>
+        </form>
         <!-- Рандом начало -->
 
         <!-- Рандом конец -->
         <!-- Карточки начало -->
-        
+
         <!-- Карточки конец -->
         <!-- Вероника начало-->
         <div class="button"></div>
         <div class="block"></div>
-    <footer></footer>
-    <!-- Вероника конец-->
+        <footer></footer>
+        <!-- Вероника конец-->
     </main>
     <script src="./assets/script/script.js"></script>
 </body>
