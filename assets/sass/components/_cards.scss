@@ -1,3 +1,38 @@
-h1 {
-  color: aqua;
+.cards {
+  .cards__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cards__inner {
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    // background-color: #87b4d0b1;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 5px;
+    filter: invert(26%);
+    margin: 5px;
+  }
+  .cards__box {
+    background-color: #87b4d0c3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    height: 80%;
+  }
+  .cards__calories-img,
+  .cards__time-img {
+    width: 30px;
+  }
+  .cards__time-img {
+    width: 22px;
+  }
+  .cards__box-time-calories {
+    display: flex;
+  }
 }

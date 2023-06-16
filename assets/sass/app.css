@@ -310,6 +310,35 @@ template {
   display: none;
 }
 
-h1 {
-  color: aqua;
+.cards .cards__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cards .cards__inner {
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+  padding: 5px;
+  filter: invert(26%);
+  margin: 5px;
+}
+.cards .cards__box {
+  background-color: rgba(135, 180, 208, 0.7647058824);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  height: 80%;
+}
+.cards .cards__calories-img,
+.cards .cards__time-img {
+  width: 30px;
+}
+.cards .cards__time-img {
+  width: 22px;
+}
+.cards .cards__box-time-calories {
+  display: flex;
 }/*# sourceMappingURL=app.css.map */
