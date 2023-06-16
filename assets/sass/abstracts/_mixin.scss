@@ -1,0 +1,10 @@
+@mixin block ($flex-dir,$width,$bg-color){
+    flex-direction: $flex-dir;   
+    width: $width;
+    background-color: $bg-color;
+    display: flex;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0px 2px 2px $color-basic-dark;
+    border-radius: 15px;
+}
