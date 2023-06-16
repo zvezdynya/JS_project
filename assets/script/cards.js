@@ -19,10 +19,31 @@ async function sendApiRequest() {
 }
 
 function useApiData(data) {
-  document.getElementById("content").innerHTML = `
-  <div class="card">
-            <img src="${data.hits[0].recipe.image}">
-  </div>`;
+  const cardsInner = document.querySelector(".cards__container");
+  cardsInner.innerHTML = "";
+
+  data.hits.forEach((hit) => {
+    const recipe = hit.recipe;
+    const card = document.createElement("div");
+    card.classList.add("cards__inner");
+    card.style.backgroundImage = `url(${recipe.image})`;
+    card.innerHTML = `
+          <div class="cards__box">
+            <p>${recipe.label}</p>
+            <p>${recipe.source}</p>
+            <div class="cards__box-time-calories">
+            <div class="cards__box-calories">
+            <img src="assets/images/calories.svg" class="cards__calories-img">
+            <div class="cards__calories-text">${Math.round(
+              recipe.calories
+            )}</div>
+            </div>
+            
+            </div>
+          </div>
+        `;
+    cardsInner.appendChild(card);
+  });
 }
 
 //spoonacular
@@ -51,3 +72,8 @@ function useApiData(data) {
 //       <img src="${data.baseUri}${data.results[0].image}">
 //       </div>`;
 // }
+
+/* <div class="cards__box-time">
+            <img src="assets/images/time.svg" class="cards__time-img">
+            <div class="cards__time-text"></div>
+            </div> */
