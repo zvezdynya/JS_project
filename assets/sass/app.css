@@ -310,35 +310,34 @@ template {
   display: none;
 }
 
-.cards .cards__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+h1 {
+  color: aqua;
 }
-.cards .cards__inner {
-  width: 200px;
-  height: 250px;
-  border-radius: 15px;
-  padding: 5px;
-  filter: invert(26%);
-  margin: 5px;
-}
-.cards .cards__box {
-  background-color: rgba(135, 180, 208, 0.7647058824);
+
+.header-block {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 15px;
-  height: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-style: italic;
 }
-.cards .cards__calories-img,
-.cards .cards__time-img {
-  width: 30px;
+
+.image {
+  width: 100%;
+  margin-top: 35px;
 }
-.cards .cards__time-img {
-  width: 22px;
+
+.header-block__Recipies {
+  font-weight: 700;
+  font-size: 250%;
 }
-.cards .cards__box-time-calories {
-  display: flex;
+
+.header-block__Restaurant-Search {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+.header-block__Registration {
+  font-weight: 700;
+  font-size: 250%;
 }/*# sourceMappingURL=app.css.map */
