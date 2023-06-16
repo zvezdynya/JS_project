@@ -1,35 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/sass/app.css" />
     <title>Yummy!</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- Шахноз начало-->
-      <header></header>
-      <!-- Шахноз конец-->
-      <main>
-        <!-- Анна инпуты начало-->
-        <div class="inputs__wrapper"></div>
-        <!-- Анна инпуты конец-->
-        <!-- Рандом начало -->
+</head>
 
-        <!-- Рандом конец -->
-        <!-- Карточки начало -->
-        <h1>тут будут Карточки</h1>
-        <!-- Карточки конец -->
-        <!-- Вероника начало-->
-        <div class="button"></div>
-        <div class="block"></div>
-      </main>
-      <footer></footer>
-      <!-- Вероника конец-->
+<body>
+    <div class="wrapper">
+        <!-- Шахноз начало-->
+        <header></header>
+        <!-- Шахноз конец-->
+        <main>
+            <!-- Анна инпуты начало-->
+            <!-- <input type="text" id="recipe">
+            <button class="search">search</button>
+            <div id="content"></div> -->
+            <div class="inputs__wrapper"></div>
+            <!-- Анна инпуты конец-->
+            <!-- Рандом начало -->
+            <div class="random__wrapper">
+                <div class="random__card-wrapper">
+                    <div class="random__card-items">
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random__card-item">
+                            <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                alt="food_photo" class="random__card-image">
+                            <div class="random__card-body">
+                                <h3 class="random__card-title">Щербет</h3>
+                                <div class="random__card-ingridients">
+                                    <ul>
+                                        <li>Сахар - 300 г</li>
+                                        <li>Арахис - 250 г</li>
+                                        <li>Сгущённое молоко - 200 г</li>
+                                        <li>Сливки жирностью 30 % - 200 мл</li>
+                                        <li> Масло сливочное 82 % - 100 г</li>
+                                        <li>Соль - 1 ч. ложка без горки</li>
+                                        <li>Масло растительное - для смазывания формы</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Рандом конец -->
+            <!-- Карточки начало -->
+            <h1>тут будут Карточки</h1>
+            <!-- Карточки конец -->
+            <!-- Вероника начало-->
+            <div class="button"></div>
+            <div class="block"></div>
+        </main>
+        <footer></footer>
+        <!-- Вероника конец-->
     </div>
 
     <script src="assets/script/script.js"></script>
-  </body>
+</body>
+
 </html>
