@@ -1,0 +1,9 @@
+body {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */
+
+.grid{
+  display: grid;
+  grid-template-columns: 30px 100px 30px 100px 30px 100px;
+}
