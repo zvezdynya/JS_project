@@ -312,4 +312,32 @@ template {
 
 h1 {
   color: aqua;
+}
+
+.header-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.image {
+  width: 100%;
+  margin-top: 35px;
+}
+
+.header-block__Recipies {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+.header-block__Restaurant-Search {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+.header-block__Registration {
+  font-weight: 700;
+  font-size: 250%;
 }/*# sourceMappingURL=app.css.map */
