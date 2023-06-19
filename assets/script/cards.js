@@ -71,7 +71,6 @@ function useApiData(data) {
             <div class="cards__time-text">${recipe.totalTime} mins</div>
             </div>
             </div>
-
           </div>
 
         `;
@@ -82,8 +81,8 @@ function useApiData(data) {
 //слайдер:
 new Swiper(".cards__slider", {
   direction: "horizontal",
-  loop: true,
-  centeredSlides: true, // Установка навигации по центру блока
+  // loop: true,
+  // centeredSlides: true, // Установка навигации по центру блока
 
   pagination: {
     el: ".swiper-pagination",
