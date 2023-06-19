@@ -323,7 +323,6 @@ template {
 .cards {
   width: 50vw;
   margin: 10px auto;
-  font-family: "Diphylleia";
 }
 .cards .cards__container {
   display: flex;
@@ -501,4 +500,9 @@ template {
 .header-block__Registration {
   font-weight: 700;
   font-size: 250%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 5% 25% 5% 25%;
 }/*# sourceMappingURL=app.css.map */
