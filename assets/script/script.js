@@ -51,3 +51,73 @@ function useApiData(data) {
 //       <img src="${data.baseUri}${data.results[0].image}">
 //       </div>`;
 // }
+
+//Valya
+
+dishTypes = [`Alcohol-cocktail`, `Biscuits and cookies`, `Bread`, `Cereals`, `Condiments and sauces`, `Drinks`, `Desserts`, `Egg`, `Main course`, `Omelet`, `Pancake`, `Preps`, `Preserve`, `Salad`, `Sandwiches`, `Soup`, `Starter`];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const appId = "3a18015c";
+  const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
+  fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${Math.floor(Math.random()*dishTypes.length)}`)
+  .then((response) => {
+    if (!response.ok) {
+        throw new Error('Unfortunately, the server is not responding. Try using the search.');
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    const hitsRcipes = data.hits;
+    console.log(hitsRcipes);
+    const wrapperRandomCards = document.querySelector('.random__card-items');
+    
+
+    hitsRcipes.forEach(el => {
+      const cardRandomRes = document.createElement('div');
+      cardRandomRes.classList.add('random__card-item');
+      
+      //получаем каждый ингридиент отдельным пунктом
+
+      // const addIngredients = function () {
+      //   el.recipe.ingredients.forEach(elem => {
+      //   const ingredient = elem.text;
+      //   console.log(ingredient);
+      //   const liRandom = document.createElement('li');
+      //   return liRandom.innerHTML += ingredient;
+      //   });
+      // };
+
+      cardRandomRes.innerHTML = `<div class="random__card-item">
+                                    <span class="border tl"></span>
+                                    <span class="border tr"></span>
+                                    <span class="border bl"></span>
+                                    <span class="border br"></span>
+                                    <h3 class="random__card-title">${el.recipe.label}</h3>
+                                    <div class="wrapper__card-item">
+                                        <img src="${el.recipe.image}"
+                                            alt="food_photo" class="random__card-image">
+                                        <div class="random__card-body">
+
+                                            <div class="random__card-ingridients">
+                                                <ul>
+                                                    ${el.recipe.ingredients.forEach(elem => {
+                                                      console.log(elem.text);
+                                                      cardRandomRes.innerHTML+= `<li>${elem.text}</li>`;
+                                                      })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+      wrapperRandomCards.innerHTML += cardRandomRes.innerHTML;
+    });
+  })
+  .catch((error) => {
+    wrapperRandomCards.innerHTML = `<p class="errorText">${error.message}</p>`;
+  });
+  // .finally(() => {
+   
+  // });
+
+});

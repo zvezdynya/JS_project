@@ -1,8 +1,46 @@
 .random__card-wrapper {
-    // overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .arrow-3 {
+        transform: rotate(180deg);
+    }
+
+    .arrow-3, .arrow-4 {
+        color: #337AB7;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 36px;
+        height: 36px;
+        line-height: 18px; 
+        display: inline-block; 
+    }
+    .arrow-3 .arrow-3-icon, 
+    .arrow-4 .arrow-4-icon {
+        position: relative;
+        top: -1px;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+    .arrow-3 .arrow-3-iconcircle, 
+    .arrow-4 .arrow-4-iconcircle {
+        transition: stroke-dashoffset .3s ease;
+        stroke-dasharray: 95;
+        stroke-dashoffset: 95;
+    }
+    .arrow-3:hover .arrow-3-icon, 
+    .arrow-4:hover .arrow-4-icon {
+        transform: translate3d(5px, 0, 0);
+    }
+    .arrow-3:hover .arrow-3-iconcircle, 
+    .arrow-4:hover .arrow-4-iconcircle {
+        stroke-dashoffset: 0;
+    }
 
     .random__card-items {
-        overflow: auto;
+        overflow-x: auto;
         -ms-overflow-style: none;
         scrollbar-width: none;
         display: flex;
@@ -10,12 +48,34 @@
         width: max-content;
 
         .random__card-item {
+            position: relative;
             display: flex;
-            flex-direction: row;
-            width: 80vw;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid black;
+            flex-direction: column;
+            width: max-content;
+            //max-width: 800px;
+            //border: 2px solid transparent;
+            background-image: linear-gradient(90deg, #5db3cb55 0%, #93fb9d2c 100%);
+            padding: 20px 30px;
+            margin: 20px 30px 0;
+            font-size: 17px;
+            line-height: 28px;
+            transform: rotate(-1deg);
+            border: 2px solid transparent;
+            //border-image: linear-gradient(90deg, #5db3cb74 0%, #93fb9d69 100%) 20% / 1 / 0 stretch;
+            background-image: linear-gradient(90deg, #5db3cb34 0%, #93fb9d16 100%);
+            box-shadow: rgba(136, 165, 191, 0.231) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+            //box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+            transition: all 0.13s ease-in;
+
+
+            border-top-left-radius: 37px 140px;
+            border-top-right-radius: 23px 130px;
+            border-bottom-left-radius: 110px 19px;
+            border-bottom-right-radius: 120px 24px;
+
+            h3 {
+                margin: 5px 0;
+            }
 
             .random__card-image {
                 width: 200px;
@@ -23,12 +83,69 @@
             }
 
             .random__card-body {
-    
+                width: 300px;
             }
+
+            .random__card-title {
+                text-align: center;
+            }
+
+            .wrapper__card-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .border {
+                position: absolute;
+                transition: all 0.13s ease-in;
+            }
+            
+            .tl {
+                position: absolute;
+                left: -50px;
+                top: -63px;
+                font-weight: 600;
+            }
+            
+            .tr {
+                right: -50px;
+                top: -63px;
+                font-weight: 600;
+            }
+
+            .bl {
+                left: -50px;
+                bottom: -71px;
+                font-weight: 600;
+            }
+            
+            .br {
+                right: -50px;
+                bottom: -63px;
+                font-weight: 600;
+            }
+
+            li {
+                list-style-type: none;
+            }
+        }
+
+        .random__card-item:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .random__card-item:hover .border {
+            transform: translateY(4px) rotate(-5deg);
         }
     }
     .random__card-items::-webkit-scrollbar {
         width: 0;
         height: 0;
     }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+
 }
