@@ -310,24 +310,22 @@ template {
   display: none;
 }
 
+<<<<<<< HEAD
 .cards {
   width: 50vw;
   margin: 10px auto;
 }
 .cards .cards__container {
   display: flex;
+=======
+h1 {
+  color: aqua;
+>>>>>>> 4072d670ea852b6b7ff4468017a15c34388c49a2
 }
-.cards .cards__inner {
-  width: 200px;
-  height: 250px;
-  border-radius: 15px;
-  padding: 5px;
-  filter: invert(26%);
-  margin: 5px;
-}
-.cards .cards__box {
-  background-color: rgba(135, 180, 208, 0.7647058824);
+
+.header-block {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -401,4 +399,30 @@ template {
   100% {
     transform: rotate(360deg);
   }
+=======
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.image {
+  width: 100%;
+  margin-top: 35px;
+}
+
+.header-block__Recipies {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+.header-block__Restaurant-Search {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+.header-block__Registration {
+  font-weight: 700;
+  font-size: 250%;
+>>>>>>> 4072d670ea852b6b7ff4468017a15c34388c49a2
 }/*# sourceMappingURL=app.css.map */
