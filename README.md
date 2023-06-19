@@ -1,4 +1,4 @@
-# Yummy - website for proper nutrition. <br/>
+<h1 color="green"># Yummy - website for proper nutrition.</h1><br/>
 <div id=“gif” align=“center”>
  <img src="assets/images/frontend.gif" class="image" width=“100”/>
 </div>
