@@ -9,20 +9,21 @@ searchButton.addEventListener("click", () => {
 async function sendApiRequest() {
   const loader = document.getElementById("loader");
   loader.style.display = "block"; // Показать лоадер
-
   try {
     const appId = "3a18015c"; //индив. данные из сайта edamam
     const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; //индив. данные из сайта edamam
-    const searchRecipe = document.getElementById("recipe").value; //нужно будет заменить
+    const searchRecipe = document.getElementById("recipe"); //нужно будет заменить
+    let searchRecipeValue = searchRecipe.value; //нужно будет заменить
     loader.style.display = "block"; // Показать лоадер
 
     let response = await fetch(
-      `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRecipe}`
+      `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRecipeValue}`
     );
     console.log(response);
     let data = await response.json();
     console.log(data);
     useApiData(data);
+    searchRecipe.value = ""; // Очистить значение инпута
   } catch (error) {
     document.querySelector(".cards__container").textContent =
       "Server is not responding";
@@ -36,8 +37,9 @@ function useApiData(data) {
   cardsInner.innerHTML = "";
 
   if (data.hits.length === 0) {
-    document.querySelector(".cards__container").textContent =
-      "Recipe not found";
+    document.querySelector(
+      ".cards__container"
+    ).innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
   }
 
@@ -79,23 +81,29 @@ function useApiData(data) {
 
 //слайдер:
 new Swiper(".cards__slider", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
+  centeredSlides: true, // Установка навигации по центру блока
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  // autoHeight: true,
 });
