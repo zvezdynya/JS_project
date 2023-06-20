@@ -370,7 +370,7 @@ template {
 }
 .cards .cards__url {
   text-decoration: none;
-  color: #EAECEF;
+  color: #efeaea;
   cursor: pointer;
 }
 .cards .cards__title {
@@ -631,4 +631,8 @@ template {
 .grid {
   display: grid;
   grid-template-columns: 5% 25% 5% 25%;
+}
+
+.inputs_form {
+  margin: 3% 40%;
 }/*# sourceMappingURL=app.css.map */
