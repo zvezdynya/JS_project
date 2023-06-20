@@ -1,29 +1,29 @@
-//edamam
-const searchButton = document.querySelector(".search");
+// //edamam
+// const searchButton = document.querySelector(".search");
 
-searchButton.addEventListener("click", () => {
-  sendApiRequest();
-});
+// searchButton.addEventListener("click", () => {
+//   sendApiRequest();
+// });
 
-async function sendApiRequest() {
-  const appId = "3a18015c";
-  const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
-  const searchRercipe = document.getElementById("recipe").value;
-  let response = await fetch(
-    `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRercipe}`
-  );
-  console.log(response);
-  let data = await response.json();
-  console.log(data);
-  useApiData(data);
-}
+// async function sendApiRequest() {
+//   const appId = "3a18015c";
+//   const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
+//   const searchRercipe = document.getElementById("recipe").value;
+//   let response = await fetch(
+//     `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRercipe}`
+//   );
+//   console.log(response);
+//   let data = await response.json();
+//   console.log(data);
+//   useApiData(data);
+// }
 
-function useApiData(data) {
-  document.getElementById("content").innerHTML = `
-  <div class="card">
-            <img src="${data.hits[0].recipe.image}">
-  </div>`;
-}
+// function useApiData(data) {
+//   document.getElementById("content").innerHTML = `
+//   <div class="card">
+//             <img src="${data.hits[0].recipe.image}">
+//   </div>`;
+// }
 
 //spoonacular
 // const searchButton = document.querySelector(".search");
@@ -54,6 +54,34 @@ function useApiData(data) {
 
 //Valya
 
+const wrapperRandomCards = document.querySelector('.random__card-items');
+const button = document.querySelector('.arrow-4');
+button.onclick = function () {
+    // var container = document.getElementById('container');
+    sideScroll(wrapperRandomCards,'right',50,600,40);
+};
+
+const back = document.querySelector('.arrow-3');
+back.onclick = function () {
+   // var container = document.getElementById('container');
+    sideScroll(wrapperRandomCards,'left',50,600,40);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    const slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
+
 dishTypes = [`Alcohol-cocktail`, `Biscuits and cookies`, `Bread`, `Cereals`, `Condiments and sauces`, `Drinks`, `Desserts`, `Egg`, `Main course`, `Omelet`, `Pancake`, `Preps`, `Preserve`, `Salad`, `Sandwiches`, `Soup`, `Starter`];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,9 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   .then((data) => {
     console.log(data);
     const hitsRcipes = data.hits;
-    console.log(hitsRcipes);
-    const wrapperRandomCards = document.querySelector('.random__card-items');
-    
+    console.log(hitsRcipes);    
 
     hitsRcipes.forEach(el => {
       const cardRandomRes = document.createElement('div');
@@ -79,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
       
       //получаем каждый ингридиент отдельным пунктом
 
-      // const addIngredients = function () {
-      //   el.recipe.ingredients.forEach(elem => {
-      //   const ingredient = elem.text;
-      //   console.log(ingredient);
-      //   const liRandom = document.createElement('li');
-      //   return liRandom.innerHTML += ingredient;
-      //   });
-      // };
+      const addIngredients = function () {
+        el.recipe.ingredients.forEach(elem => {
+        const ingredient = elem.text;
+        console.log(ingredient);
+        //const liRandom = document.createElement('li');
+        return `<li>${ingredient}</li>`;
+        });
+      };
 
       cardRandomRes.innerHTML = `<div class="random__card-item">
                                     <span class="border tl"></span>
@@ -102,8 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <div class="random__card-ingridients">
                                                 <ul>
                                                     ${el.recipe.ingredients.forEach(elem => {
-                                                      console.log(elem.text);
-                                                      cardRandomRes.innerHTML+= `<li>${elem.text}</li>`;
+                                                      const ingredient = elem.text;
+                                                      console.log(ingredient);
+                                                      return `<li>${ingredient}</li>`;
                                                       })}
                                                 </ul>
                                             </div>
