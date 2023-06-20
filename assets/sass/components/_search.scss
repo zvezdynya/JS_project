@@ -1,6 +1,33 @@
-.grid{
+.inputs_form{
     display: grid;
-    grid-template-columns: 5% 25% 5% 25%;
+    background-color: #5682c360;
+    justify-content: center;
+    font-style: italic;
   }
-
   
+  .search_area{
+    display: grid;
+    grid-template-columns: 90% 10%;
+  }
+  
+  .search_input{
+    background-color:  #bcc6d696;
+    border-radius: 5px;
+  }
+  
+  .search_parameters{
+    background-color:  #5682C3;
+    color: white;
+    font-size: 100%;
+    border-radius: 5px;
+  }
+  
+  .inputs__wrapper{
+    font-size: 130%;
+    font-weight: 600;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 7% 43% 7% 43%;
+  }

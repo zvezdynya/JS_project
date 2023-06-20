@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +10,7 @@
     <link rel="icon" href="assets/icons/page_icon.png" />
     <title>Yummy!</title>
 </head>
+
 <body>
     <div class="wrapper">
         <!-- Шахноз начало-->
@@ -24,8 +26,10 @@
         <main>
             <!-- Анна инпуты начало-->
             <form method="get" class="inputs_form">
-                <input name="search" placeholder="What do you want to cook?" type="search">
-                <button type="submit">></button>
+                <div class="search_area">
+                    <input class="search_input" name="search" placeholder="What do you want to cook?" type="search">
+                    <button class="search_parameters" type="submit">></button>
+                </div>
                 <div class="inputs__wrapper">Specify additional parameters for the search:</div>
                 <label for="parameters" class="grid">
                     <input type="checkbox" name="parameters" value="gluten_free">Gluten free
@@ -40,34 +44,35 @@
             </form>
             <!-- Анна инпуты конец-->
             <!-- Рандом начало -->
-            
+
             <!-- Рандом конец -->
             <!-- Карточки начало -->
             <div class="cards">
-              <div class="cards__swiper swiper">
-                  <input type="text" id="recipe" />
-                  <button class="search">search</button>
-                  <div class="cards__slider swiper-container">
-                      <div class="cards__container swiper-wrapper">
-                          <div id="loader"></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-scrollbar"></div>
-          </div>
-          <!-- Карточки конец -->
-    <!-- Вероника начало-->
-    <div class="button"></div>
-    <div class="block"></div>
-        <footer>
-        </footer>
-        <!-- Вероника конец-->
+                <div class="cards__swiper swiper">
+                    <input type="text" id="recipe" />
+                    <button class="search">search</button>
+                    <div class="cards__slider swiper-container">
+                        <div class="cards__container swiper-wrapper">
+                            <div id="loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <!-- Карточки конец -->
+            <!-- Вероника начало-->
+            <div class="button"></div>
+            <div class="block"></div>
+            <footer>
+            </footer>
+            <!-- Вероника конец-->
         </main>
         <script src="assets/script/cards.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
-      </div>
-    </body>  
+    </div>
+</body>
+
 </html>
