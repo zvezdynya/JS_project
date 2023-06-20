@@ -517,23 +517,24 @@ template {
 }
 
 .search_input{
-  background-color:  #bcc6d696;
+  background-color:  #bbc6d696;
+  border-color:  #bbc6d696;
   border-radius: 5px;
-
+  box-shadow: 0px 0px 1px 1px #bcc6d696;
 }
 
 .search_parameters{
   background-color:  #5682C3;
   color: white;
   font-size: 100%;
-  border-radius: 5px;
-  
+  border-radius: 5px;  
+  box-shadow: 0px 0px 1px 1px #5682C3;
+  border-color:  #5682C3;
 }
 
 .inputs__wrapper{
   font-size: 130%;
   font-weight: 600;
- 
 }
 
 .grid {
