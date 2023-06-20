@@ -72,7 +72,6 @@ function useApiData(data) {
             </div>
             </div>
           </div>
-
         `;
     cardsInner.appendChild(card);
   });
@@ -81,7 +80,8 @@ function useApiData(data) {
 //слайдер:
 new Swiper(".cards__slider", {
   direction: "horizontal",
-  // loop: true,
+  loop: true,
+  // slidesPerView: 4,
   // centeredSlides: true, // Установка навигации по центру блока
 
   pagination: {
@@ -90,10 +90,10 @@ new Swiper(".cards__slider", {
     dynamicBullets: true,
   },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
 
   scrollbar: {
     el: ".swiper-scrollbar",

@@ -1,11 +1,8 @@
 .cards {
-  width: 50vw;
+  width: 80vw;
   margin: 10px auto;
-
   .cards__container {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .cards__inner {
     width: 200px;
@@ -37,6 +34,7 @@
   .cards__box-time-calories {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     width: 100%;
   }
   .cards__box-time,
@@ -55,48 +53,16 @@
     text-align: center;
     font-weight: 800;
   }
-  .cards__text-recipe-not {
-    text-align: center;
-    margin-top: 25%;
-  }
   .cards__slider {
-    max-width: 25%;
+    max-width: 20%;
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
-    color: $search-btn-color;
+    color: #3498db00;
   }
   .swiper-pagination-bullet {
-    background-color: $search-btn-color;
+    background-color: #3498db00;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin-top: 25%;
-  }
-  .swiper-button-next {
-    margin-right: 15%;
-  }
-  .swiper-button-prev {
-    margin-left: 15%;
-  }
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, -10%);
-  }
-  // .swiper-button-prev,
-  // .swiper-rtl .swiper-button-next {
-  //   left: var(--swiper-navigation-sides-offset, 15%);
-  // }
-  // .swiper-button-next,
-  // .swiper-rtl .swiper-button-prev {
-  //   right: var(--swiper-navigation-sides-offset, 15%);
-  // }
-  // .swiper-horizontal > .swiper-pagination-bullets,
-  // .swiper-pagination-bullets.swiper-pagination-horizontal,
-  // .swiper-pagination-custom,
-  // .swiper-pagination-fraction {
-  //   bottom: var(--swiper-pagination-top, 50%);
-  // }
-
   #loader {
     width: 40px;
     height: 40px;
@@ -105,8 +71,6 @@
     border-radius: 50%;
     animation: spin 2s linear infinite;
     display: none;
-    margin-top: 55%;
-    margin-left: 60%;
   }
 
   @keyframes spin {
@@ -118,25 +82,11 @@
     }
   }
   @media screen and (min-width: 3000px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin-top: 10%;
-    }
     .cards__slider {
       max-width: 20%;
     }
-    .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: var(--swiper-pagination-bottom, 15%);
-    }
   }
   @media screen and (max-width: 2500px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      margin-top: 15%;
-    }
-    .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: var(--swiper-pagination-bottom, 40%);
-    }
   }
   @media screen and (max-width: 1280px) {
     .cards__slider {
@@ -149,20 +99,13 @@
     }
   }
   @media screen and (max-width: 768px) {
-    width: 70vw;
     .cards__slider {
       max-width: 30%;
     }
   }
   @media screen and (max-width: 600px) {
     .cards__slider {
-      max-width: 80%;
-    }
-    .swiper-button-next {
-      margin-right: 1%;
-    }
-    .swiper-button-prev {
-      margin-left: 1%;
+      max-width: 85%;
     }
   }
 }

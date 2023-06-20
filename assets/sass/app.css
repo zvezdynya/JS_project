@@ -321,13 +321,11 @@ template {
 }
 
 .cards {
-  width: 50vw;
+  width: 80vw;
   margin: 10px auto;
 }
 .cards .cards__container {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .cards .cards__inner {
   width: 200px;
@@ -377,32 +375,15 @@ template {
   text-align: center;
   font-weight: 800;
 }
-.cards .cards__text-recipe-not {
-  text-align: center;
-  margin-top: 25%;
-}
 .cards .cards__slider {
-  max-width: 25%;
+  max-width: 20%;
 }
 .cards .swiper-button-next::after,
 .cards .swiper-button-prev::after {
-  color: #5682C3;
+  color: rgba(52, 152, 219, 0);
 }
 .cards .swiper-pagination-bullet {
-  background-color: #5682C3;
-}
-.cards .swiper-button-next,
-.cards .swiper-button-prev {
-  margin-top: 25%;
-}
-.cards .swiper-button-next {
-  margin-right: 15%;
-}
-.cards .swiper-button-prev {
-  margin-left: 15%;
-}
-.cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: var(--swiper-pagination-bottom, -10%);
+  background-color: rgba(52, 152, 219, 0);
 }
 .cards #loader {
   width: 40px;
@@ -412,8 +393,6 @@ template {
   border-radius: 50%;
   animation: spin 2s linear infinite;
   display: none;
-  margin-top: 55%;
-  margin-left: 60%;
 }
 @keyframes spin {
   0% {
@@ -424,24 +403,8 @@ template {
   }
 }
 @media screen and (min-width: 3000px) {
-  .cards .swiper-button-next,
-  .cards .swiper-button-prev {
-    margin-top: 10%;
-  }
   .cards .cards__slider {
     max-width: 20%;
-  }
-  .cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 15%);
-  }
-}
-@media screen and (max-width: 2500px) {
-  .cards .swiper-button-next,
-  .cards .swiper-button-prev {
-    margin-top: 15%;
-  }
-  .cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 40%);
   }
 }
 @media screen and (max-width: 1280px) {
@@ -455,22 +418,13 @@ template {
   }
 }
 @media screen and (max-width: 768px) {
-  .cards {
-    width: 70vw;
-  }
   .cards .cards__slider {
     max-width: 30%;
   }
 }
 @media screen and (max-width: 600px) {
   .cards .cards__slider {
-    max-width: 80%;
-  }
-  .cards .swiper-button-next {
-    margin-right: 1%;
-  }
-  .cards .swiper-button-prev {
-    margin-left: 1%;
+    max-width: 85%;
   }
 }
 
