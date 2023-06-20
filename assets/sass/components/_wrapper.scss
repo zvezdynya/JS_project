@@ -1,0 +1,10 @@
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient($color-basic-light, $color-secondary-light);
+}
