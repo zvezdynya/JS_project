@@ -118,6 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // .finally(() => {
    
-  // });
+  });
 
-});
+// async function sendApiRequest() {
+//   const apiKey = "83b7647d80da451e83bc5f69025b4643";
+//   const searchRecipe = document.getElementById("recipe").value;
+
+//   let response = await fetch(
+//     `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&query=${searchRecipe}&number=1&instructionsRequired=true`
+//   );
+
+//   let data = await response.json();
+//   console.log(data);
+//   useApiData(data); // Вызываем функцию useApiData() для обработки данных и вывода в HTML
+// }
+
