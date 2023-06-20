@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +10,7 @@
     <link rel="icon" href="assets/icons/page_icon.png" />
     <title>Yummy!</title>
 </head>
+
 <body>
     <div class="wrapper">
         <!-- Шахноз начало-->
@@ -40,34 +42,87 @@
             </form>
             <!-- Анна инпуты конец-->
             <!-- Рандом начало -->
-            
-            <!-- Рандом конец -->
+            <div class="random__wrapper">
+                <div class="random__card-wrapper">
+                    <div class="arrow-3 random__arrow">
+                        <svg class="arrow-3-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                            viewBox="0 0 32 32">
+                            <g fill="none" stroke="#337AB7" stroke-width="1.5" stroke-linejoin="round"
+                                stroke-miterlimit="10">
+                                <circle class="arrow-3-iconcircle" cx="16" cy="16" r="15.12"></circle>
+                                <path class="arrow-3-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="random__card-items">
+                        <!-- <div class="random__card-item">
+                            <span class="border tl"></span>
+                            <span class="border tr"></span>
+                            <span class="border bl"></span>
+                            <span class="border br"></span>
+                            <h3 class="random__card-title">Щербет</h3>
+                            <div class="wrapper__card-item">
+                                <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
+                                    alt="food_photo" class="random__card-image">
+                                <div class="random__card-body">
+
+                                    <div class="random__card-ingridients">
+                                        <ul>
+                                            <li>Сахар - 300 г</li>
+                                            <li>Арахис - 250 г</li>
+                                            <li>Сгущённое молоко - 200 г</li>
+                                            <li>Сливки жирностью 30 % - 200 мл</li>
+                                            <li> Масло сливочное 82 % - 100 г</li>
+                                            <li>Соль - 1 ч. ложка без горки</li>
+                                            <li>Масло растительное - для смазывания формы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="arrow-4 random__arrow">
+                        <svg class="arrow-4-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                            viewBox="0 0 32 32">
+                            <g fill="none" stroke="#337AB7" stroke-width="1.5" stroke-linejoin="round"
+                                stroke-miterlimit="10">
+                                <circle class="arrow-4-iconcircle" cx="16" cy="16" r="15.12"></circle>
+                                <path class="arrow-4-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
             <!-- Карточки начало -->
             <div class="cards">
-              <div class="cards__swiper swiper">
-                  <input type="text" id="recipe" />
-                  <button class="search">search</button>
-                  <div class="cards__slider swiper-container">
-                      <div class="cards__container swiper-wrapper">
-                          <div id="loader"></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-scrollbar"></div>
-          </div>
-          <!-- Карточки конец -->
-    <!-- Вероника начало-->
-    <div class="button"></div>
-    <div class="block"></div>
-        <footer>
-        </footer>
-        <!-- Вероника конец-->
+                <div class="cards__swiper swiper">
+                    <input type="text" id="recipe" />
+                    <button class="search">search</button>
+                    <div class="cards__slider swiper-container">
+                        <div class="cards__container swiper-wrapper">
+                            <div id="loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <!-- Карточки конец -->
+            <!-- Вероника начало-->
+            <div class="button"></div>
+            <div class="block"></div>
+            <footer>
+            </footer>
+            <!-- Вероника конец-->
         </main>
+        <script src="assets/script/script.js"></script>
         <script src="assets/script/cards.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
-      </div>
-    </body>  
+    </div>
+</body>
+
 </html>
