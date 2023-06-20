@@ -6,20 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/sass/app.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" href="assets/icons/page_icon.png" />
     <title>Yummy!</title>
 </head>
 
 <body>
     <div class="wrapper">
         <!-- Шахноз начало-->
-        <header></header>
+        <header>
+            <div class="header-block">
+                <div class="header-block__Recipies">Recipies</div>
+                <div class="header-block__Restaurant-Search">Restaurant Search</div>
+                <div class="header-block__Registration">Registration</div>
+            </div>
+            <img src="assets/images/banner.jpg" class="image">
+        </header>
         <!-- Шахноз конец-->
         <main>
             <!-- Анна инпуты начало-->
-            <input type="text" id="recipe">
-            <button class="search">search</button>
-            <div id="content"></div>
-            <div class="inputs__wrapper"></div>
+            <form method="get" class="inputs_form">
+                <input name="search" placeholder="What do you want to cook?" type="search">
+                <button type="submit">></button>
+                <div class="inputs__wrapper">Specify additional parameters for the search:</div>
+                <label for="parameters" class="grid">
+                    <input type="checkbox" name="parameters" value="gluten_free">Gluten free
+                    <input type="checkbox" name="parameters" value="keto">Keto
+                    <input type="checkbox" name="parameters" value="no_oil">No oil
+                    <input type="checkbox" name="parameters" value="seafood">Seafood
+                    <input type="checkbox" name="parameters" value="soy_free">Soy free
+                    <input type="checkbox" name="parameters" value="sugar_free">Sugar free
+                    <input type="checkbox" name="parameters" value="vegan">Vegan
+                    <input type="checkbox" name="parameters" value="vegetarian">Vegetarian
+                </label>
+            </form>
             <!-- Анна инпуты конец-->
             <!-- Рандом начало -->
             <div class="random__wrapper">
@@ -75,21 +95,34 @@
                     </div>
                 </div>
             </div>
-            <!-- Рандом конец -->
             <!-- Карточки начало -->
             <div class="cards">
-                <div class="cards__inner"></div>
+                <div class="cards__swiper swiper">
+                    <input type="text" id="recipe" />
+                    <button class="search">search</button>
+                    <div class="cards__slider swiper-container">
+                        <div class="cards__container swiper-wrapper">
+                            <div id="loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
             </div>
             <!-- Карточки конец -->
             <!-- Вероника начало-->
             <div class="button"></div>
             <div class="block"></div>
+            <footer>
+            </footer>
+            <!-- Вероника конец-->
         </main>
-        <footer></footer>
-        <!-- Вероника конец-->
+        <script src="assets/script/script.js"></script>
+        <script src="assets/script/cards.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
     </div>
-
-    <script src="assets/script/cards.js"></script>
 </body>
 
 </html>
