@@ -1,0 +1,14 @@
+.main, .main-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+}
+
+.main {
+    margin: 2rem;
+}
+
+.main-item {
+    padding: 2rem 1rem 2rem;
+}
