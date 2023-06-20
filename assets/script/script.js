@@ -105,14 +105,23 @@ document.addEventListener('DOMContentLoaded', () => {
       
       //получаем каждый ингридиент отдельным пунктом
 
-      const addIngredients = function () {
-        el.recipe.ingredients.forEach(elem => {
+      // const addIngredients = function () {
+      //   el.recipe.ingredients.forEach(elem => {
+      //   const ingredient = elem.text;
+      //   console.log(ingredient);
+      //   //const liRandom = document.createElement('li');
+      //   return `<li>${ingredient}</li>`;
+      //   });
+      // };
+
+      let stringIngredient = '';
+      el.recipe.ingredients.forEach(elem => {
         const ingredient = elem.text;
-        console.log(ingredient);
-        //const liRandom = document.createElement('li');
-        return `<li>${ingredient}</li>`;
-        });
-      };
+        
+        stringIngredient = stringIngredient + `<li>${ingredient}</li>`;
+
+      })
+      //console.log(string);
 
       cardRandomRes.innerHTML = `<div class="random__card-item">
                                     <span class="border tl"></span>
@@ -127,11 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                             <div class="random__card-ingridients">
                                                 <ul>
-                                                    ${el.recipe.ingredients.forEach(elem => {
-                                                      const ingredient = elem.text;
-                                                      console.log(ingredient);
-                                                      return `<li>${ingredient}</li>`;
-                                                      })}
+                                                    ${stringIngredient}
                                                 </ul>
                                             </div>
                                         </div>
