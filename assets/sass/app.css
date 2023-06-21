@@ -321,6 +321,7 @@ template {
 }
 
 .cards {
+  padding-top: 30px;
   width: 90vw;
   margin: 10px auto;
 }

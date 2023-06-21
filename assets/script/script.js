@@ -135,7 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Dinara
 const searchButton = document.querySelector(".search_parameters");
+const form = document.querySelector(".inputs_form");
+
 searchButton.addEventListener("click", () => {
+  sendApiRequest();
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Предотвратить отправку данных формы
   sendApiRequest();
 });
 
@@ -143,10 +150,17 @@ async function sendApiRequest() {
   const loader = document.getElementById("loader");
   loader.style.display = "block"; // Показать лоадер
   try {
-    const appId = "3a18015c"; //индив. данные из сайта edamam
-    const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; //индив. данные из сайта edamam
+    const appId = "3a18015c"; // индив. данные из сайта edamam
+    const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; // индив. данные из сайта edamam
     const searchRecipe = document.querySelector(".search_input");
     let searchRecipeValue = searchRecipe.value;
+
+    //checkbox
+    const glutenFreeCheckbox = document.getElementById("gluten_free");
+    const ketoCheckbox = document.getElementById("keto");
+    const noOilCheckbox = document.getElementById("no_oil");
+    const seaFoodCheckbox = document.getElementById("seafood");
+
     loader.style.display = "block"; // Показать лоадер
 
     let response = await fetch(
@@ -183,30 +197,30 @@ function useApiData(data) {
     card.classList.add("cards__inner");
     card.style.backgroundImage = `url(${recipe.image})`;
     card.innerHTML = `
-          <div class="cards__box d-block w-100">
-            <p class="cards__title">${recipe.label}</p>
-            <p>${recipe.dietLabels}</p>
-            <a href="${
-              recipe.url
-            }" target="_blank" class="cards__url" rel="noopener noreferrer">Recipe</a>
-            <div class="cards__box-time-calories">
-            <div class="cards__box-calories">
+      <div class="cards__box d-block w-100">
+        <p class="cards__title">${recipe.label}</p>
+        <p>${recipe.dietLabels}</p>
+        <a href="${
+          recipe.url
+        }" target="_blank" class="cards__url" rel="noopener noreferrer">Recipe</a>
+        <div class="cards__box-time-calories">
+          <div class="cards__box-calories">
             <svg class="cards__calories-img">
-          <use xlink:href="assets/images/icons/sprite.svg#calories"></use>
-        </svg>
+              <use xlink:href="assets/images/icons/sprite.svg#calories"></use>
+            </svg>
             <div class="cards__calories-text">${Math.round(
               recipe.calories / recipe.yield
             )} kcal</div>
-            </div>
-            <div class="cards__box-time">
-            <svg class="cards__time-img">
-          <use xlink:href="assets/images/icons/sprite.svg#time"></use>
-        </svg>
-            <div class="cards__time-text">${recipe.totalTime} mins</div>
-            </div>
-            </div>
           </div>
-        `;
+          <div class="cards__box-time">
+            <svg class="cards__time-img">
+              <use xlink:href="assets/images/icons/sprite.svg#time"></use>
+            </svg>
+            <div class="cards__time-text">${recipe.totalTime} mins</div>
+          </div>
+        </div>
+      </div>
+    `;
     cardsInner.appendChild(card);
   });
 }
