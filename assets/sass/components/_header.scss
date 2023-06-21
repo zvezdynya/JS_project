@@ -1,23 +1,26 @@
-.header-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 15px;
-    font-style: italic;
+.header{
+  .header__img-blok {
+    background-image: url("../images/banner.jpg");
+    max-width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
-  .image {
-    width: 100%;
-    margin-top: 35px;
+  .header__title{
+    position: absolute;
+	  top: 10%;
+	  left: 55vw;
+	  width: 100%;
+    font-weight: 500;
+    font-size: 4vw;
   }
-  .header-block__Recipies{
-    font-weight: 700;
-    font-size: 250%;
-  }
-  .header-block__Restaurant-Search {
-    font-weight: 700;
-    font-size: 250%;
-  }
-  .header-block__Registration {
-    font-weight: 700;
-    font-size: 250%;
-  }
+}
+
+@media screen and (min-width: 150px) and (max-width: 2000px) {
+  .header{
+    .header__img-blok {
+      height: 250px; 
+    }
+}
+}
