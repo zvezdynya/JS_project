@@ -321,24 +321,23 @@ template {
 }
 
 .cards {
-  width: 50vw;
+  width: 90vw;
   margin: 10px auto;
 }
 .cards .cards__container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 .cards .cards__inner {
   width: 200px;
   height: 250px;
   border-radius: 15px;
   padding: 5px;
-  filter: invert(26%);
   margin: 5px;
 }
 .cards .cards__box {
-  background-color: rgba(135, 180, 208, 0.7647058824);
+  background-image: linear-gradient(336deg, rgba(62, 146, 170, 0.87) 0%, rgba(147, 251, 157, 0.0862745098) 100%);
+  box-shadow: rgba(51, 55, 59, 0.23) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,6 +346,7 @@ template {
   padding: 10px;
   border-radius: 15px;
   height: 80%;
+  color: black;
 }
 .cards .cards__calories-img {
   width: 25px;
@@ -377,33 +377,6 @@ template {
   text-align: center;
   font-weight: 800;
 }
-.cards .cards__text-recipe-not {
-  text-align: center;
-  margin-top: 25%;
-}
-.cards .cards__slider {
-  max-width: 25%;
-}
-.cards .swiper-button-next::after,
-.cards .swiper-button-prev::after {
-  color: #5682C3;
-}
-.cards .swiper-pagination-bullet {
-  background-color: #5682C3;
-}
-.cards .swiper-button-next,
-.cards .swiper-button-prev {
-  margin-top: 25%;
-}
-.cards .swiper-button-next {
-  margin-right: 15%;
-}
-.cards .swiper-button-prev {
-  margin-left: 15%;
-}
-.cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: var(--swiper-pagination-bottom, -10%);
-}
 .cards #loader {
   width: 40px;
   height: 40px;
@@ -412,8 +385,8 @@ template {
   border-radius: 50%;
   animation: spin 2s linear infinite;
   display: none;
-  margin-top: 55%;
-  margin-left: 60%;
+  margin-bottom: 20%;
+  margin-left: 10%;
 }
 @keyframes spin {
   0% {
@@ -423,57 +396,6 @@ template {
     transform: rotate(360deg);
   }
 }
-@media screen and (min-width: 3000px) {
-  .cards .swiper-button-next,
-  .cards .swiper-button-prev {
-    margin-top: 10%;
-  }
-  .cards .cards__slider {
-    max-width: 20%;
-  }
-  .cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 15%);
-  }
-}
-@media screen and (max-width: 2500px) {
-  .cards .swiper-button-next,
-  .cards .swiper-button-prev {
-    margin-top: 15%;
-  }
-  .cards .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 40%);
-  }
-}
-@media screen and (max-width: 1280px) {
-  .cards .cards__slider {
-    max-width: 35%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .cards .cards__slider {
-    max-width: 40%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .cards {
-    width: 70vw;
-  }
-  .cards .cards__slider {
-    max-width: 30%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .cards .cards__slider {
-    max-width: 80%;
-  }
-  .cards .swiper-button-next {
-    margin-right: 1%;
-  }
-  .cards .swiper-button-prev {
-    margin-left: 1%;
-  }
-}
-
 .header .header__img-blok {
   background-image: url("../images/banner.jpg");
   max-width: 100%;
@@ -665,4 +587,79 @@ template {
 
 .inputs_form {
   margin: 3% 40%;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  max-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(rgb(222, 222, 222), rgb(230, 220, 215));
+}
+
+.main, .main-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  margin: 2rem;
+}
+
+.main-item {
+  padding: 2rem 1rem 2rem;
+}
+
+.jokeandblock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100%;
+  height: auto;
+}
+
+.joke {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+  height: auto;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.joke:hover {
+  transform: translate(0, 0.25rem);
+}
+
+.joke:active {
+  transform: translate(0em, 0.75rem);
+}
+
+.joke-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: absolute;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.block {
+  flex-direction: column;
+  width: 50%;
+  background-color: rgb(215, 215, 215);
+  display: flex;
+  height: auto;
+  padding: 2rem;
+  box-shadow: 0px 2px 2px rgb(140, 140, 140);
+  border-radius: 15px;
 }/*# sourceMappingURL=app.css.map */
