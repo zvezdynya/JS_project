@@ -1,6 +1,6 @@
 .inputs_form{
   display: grid;
-  background-color: #5682c360;
+/*   background-color: #5682c360; */
   justify-content: center;
   font-style: italic;
   padding: 1%;
@@ -20,6 +20,7 @@
 }
 
 .search_parameters{
+  width: fit-content;
   background-color:  #5682C3;
   color: white;
   font-size: 100%;

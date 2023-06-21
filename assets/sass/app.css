@@ -547,7 +547,7 @@ template {
 
 .inputs_form {
   display: grid;
-  background-color: rgba(86, 130, 195, 0.3764705882);
+  /*   background-color: #5682c360; */
   justify-content: center;
   font-style: italic;
   padding: 1%;
@@ -567,6 +567,8 @@ template {
 }
 
 .search_parameters {
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #5682C3;
   color: white;
   font-size: 100%;
