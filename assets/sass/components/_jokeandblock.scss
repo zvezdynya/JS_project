@@ -40,3 +40,51 @@
 .block {
     @include block(column,50%,$color-basic);
 }
+
+// Adative - Mobile 767, Tablet 767-991
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .jokeandblock {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 2rem;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30%;
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,50%,$color-basic);
+    }
+}

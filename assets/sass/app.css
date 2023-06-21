@@ -665,4 +665,58 @@ template {
   padding: 2rem;
   box-shadow: 0px 2px 2px rgb(140, 140, 140);
   border-radius: 15px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .jokeandblock {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 2rem;
+    max-width: 100%;
+    height: auto;
+  }
+  .joke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    height: auto;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .joke:hover {
+    transform: translate(0, 0.25rem);
+  }
+  .joke:active {
+    transform: translate(0em, 0.75rem);
+  }
+  .joke-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+  .block {
+    flex-direction: column;
+    width: 50%;
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    height: auto;
+    padding: 2rem;
+    box-shadow: 0px 2px 2px rgb(140, 140, 140);
+    border-radius: 15px;
+  }
+}
+.footer, .footer__img {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }/*# sourceMappingURL=app.css.map */
