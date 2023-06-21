@@ -133,6 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //   useApiData(data); // Вызываем функцию useApiData() для обработки данных и вывода в HTML
 // }
 
+//checkbox
+const glutenFreeCheckbox = document.getElementById("gluten_free");
+const ketoCheckbox = document.getElementById("keto");
+const noOilCheckbox = document.getElementById("no_oil");
+const seaFoodCheckbox = document.getElementById("seafood");
+
 //Dinara
 const searchButton = document.querySelector(".search_parameters");
 const form = document.querySelector(".inputs_form");
@@ -154,13 +160,6 @@ async function sendApiRequest() {
     const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; // индив. данные из сайта edamam
     const searchRecipe = document.querySelector(".search_input");
     let searchRecipeValue = searchRecipe.value;
-
-    //checkbox
-    const glutenFreeCheckbox = document.getElementById("gluten_free");
-    const ketoCheckbox = document.getElementById("keto");
-    const noOilCheckbox = document.getElementById("no_oil");
-    const seaFoodCheckbox = document.getElementById("seafood");
-
     loader.style.display = "block"; // Показать лоадер
 
     let response = await fetch(
@@ -185,9 +184,7 @@ function useApiData(data) {
   cardsInner.innerHTML = "";
 
   if (data.hits.length === 0) {
-    document.querySelector(
-      ".cards__container"
-    ).innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
+    cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
   }
 
