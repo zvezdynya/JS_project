@@ -22,25 +22,31 @@
         <!-- Шахноз конец-->
         <main>
             <!-- Анна инпуты начало-->
-            <form method="get" class="inputs_form">
-                <div class="search_area">
-                    <input class="search_input" name="search" placeholder="What do you want to cook?" type="search">
-                    <button class="search_parameters" type="submit">></button>
+            <form method="get" class="search-form">
+                <div class="search-form__wrapper">
+                    <input name="search" placeholder="What do you want to cook?" type="search"
+                        class="search-form__wrapper-area">
+                    <button type="submit" class="search-form__wrapper-button">Search</button>
                 </div>
-                <div class="inputs__wrapper">Specify additional parameters for the search:</div>
-                <label for="parameters" class="grid">
-                    <input type="checkbox" name="parameters" value="gluten_free" class="input_elements"
+                <div class="search-form__title">Specify additional parameters for the search:</div>
+                <label for="parameters" class="search-form__input">
+                    <input type="checkbox" name="parameters" value="gluten_free" class="search-form__input-elements"
                         id="gluten_free">Gluten free
-                    <input type="checkbox" name="parameters" value="keto" class="input_elements" id="keto">Keto
-                    <input type="checkbox" name="parameters" value="no_oil" class="input_elements" id="no_oil">No oil
-                    <input type="checkbox" name="parameters" value="seafood" class="input_elements" id="seafood">Seafood
-                    <input type="checkbox" name="parameters" value="soy_free" class="input_elements" id="soy_free">Soy
+                    <input type="checkbox" name="parameters" value="keto" class="search-form__input-elements"
+                        id="keto">Keto
+                    <input type="checkbox" name="parameters" value="no_oil" class="search-form__input-elements"
+                        id="no_oil">No oil
+                    <input type="checkbox" name="parameters" value="seafood" class="search-form__input-elements"
+                        id="seafood">Seafood
+                    <input type="checkbox" name="parameters" value="soy_free" class="search-form__input-elements"
+                        id="soy_free">Soy
                     free
-                    <input type="checkbox" name="parameters" value="sugar_free" class="input_elements"
+                    <input type="checkbox" name="parameters" value="sugar_free" class="search-form__input-elements"
                         id="sugar_free">Sugar
                     free
-                    <input type="checkbox" name="parameters" value="vegan" class="input_elements" id="vegan">Vegan
-                    <input type="checkbox" name="parameters" value="vegetarian" class="input_elements"
+                    <input type="checkbox" name="parameters" value="vegan" class="search-form__input-elements"
+                        id="vegan">Vegan
+                    <input type="checkbox" name="parameters" value="vegetarian" class="search-form__input-elements"
                         id="vegetarian">Vegetarian
                 </label>
             </form>
