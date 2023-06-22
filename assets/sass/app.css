@@ -625,7 +625,6 @@ template {
 .search-form {
   display: inline-block;
   /* background-color: #5682c360; */
-  background-color: #a041b8d5;
   justify-content: center;
   font-style: italic;
   padding: 1%;
@@ -635,7 +634,7 @@ template {
 
 .search-form__wrapper {
   display: grid;
-  grid-template-columns: 90% 10%;
+  grid-template-columns: 78% 22%;
   padding: 1%;
 }
 
@@ -657,6 +656,8 @@ template {
 }
 
 .search-form__title {
+  display: grid;
+  text-align: center;
   font-size: 130%;
   font-weight: 600;
 }   

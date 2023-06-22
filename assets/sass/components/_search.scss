@@ -1,6 +1,6 @@
 .search-form {
-  display: grid;
-  background-color: #5682c360;
+  display: inline-block;
+  /* background-color: #5682c360; */
   justify-content: center;
   font-style: italic;
   padding: 1%;
@@ -10,7 +10,7 @@
 
 .search-form__wrapper {
   display: grid;
-  grid-template-columns: 90% 10%;
+  grid-template-columns: 78% 22%;
   padding: 1%;
 }
 
@@ -32,14 +32,14 @@
 }
 
 .search-form__title {
-  width: auto;
+  display: grid;
+  text-align: center;
   font-size: 130%;
   font-weight: 600;
-}
+}   
 
 .search-form__input {
   display: grid;
   grid-template-columns: 7% 43% 7% 43%;
   padding: 1%;
 }
-
