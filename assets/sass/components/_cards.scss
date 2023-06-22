@@ -5,6 +5,7 @@
   .cards__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .cards__inner {
     width: 200px;
@@ -15,9 +16,9 @@
   }
   .cards__box {
     background-image: linear-gradient(
-      336deg,
-      rgb(62 146 170 / 87%) 0%,
-      rgba(147, 251, 157, 0.0862745098) 100%
+      141deg,
+      rgb(140 224 254 / 64%) 0%,
+      rgb(44 129 151 / 93%) 60%
     );
     box-shadow: rgb(51 55 59 / 23%) 6px 2px 16px 0px,
       rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
@@ -42,7 +43,6 @@
   .cards__box-time-calories {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     width: 100%;
   }
   .cards__box-time,
@@ -54,16 +54,20 @@
   }
   .cards__url {
     text-decoration: none;
-    color: $bgcolor;
+    color: $color-basic;
     cursor: pointer;
+  }
+  p,
+  a {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 2px;
   }
   .cards__title {
     text-align: center;
     font-weight: 800;
   }
-  // .cards__slider {
-  //   max-width: 20%;
-  // }
 
   #loader {
     width: 40px;
@@ -85,16 +89,35 @@
       transform: rotate(360deg);
     }
   }
-  @media screen and (min-width: 3000px) {
-  }
-  @media screen and (max-width: 2500px) {
-  }
-  @media screen and (max-width: 1280px) {
-  }
   @media screen and (max-width: 992px) {
-  }
-  @media screen and (max-width: 768px) {
+    width: 98vw;
+    .cards__inner {
+      width: 150px;
+      height: 200px;
+      padding: 2px;
+      margin: 2px;
+    }
+    .cards__box {
+      margin: 10px;
+      padding: 2px;
+      border-radius: 15px;
+      height: 90%;
+      font-size: 11px;
+    }
   }
   @media screen and (max-width: 600px) {
+    .cards__inner {
+      width: 120px;
+      height: 180px;
+      padding: 2px;
+      margin: 2px;
+    }
+    .cards__box {
+      margin: 5px;
+      padding: 2px;
+      border-radius: 15px;
+      height: 90%;
+      font-size: 11px;
+    }
   }
 }
