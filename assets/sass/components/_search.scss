@@ -1,45 +1,45 @@
-.inputs_form{
-  display: grid;
-/*   background-color: #5682c360; */
+.search-form {
+  display: inline-block;
+  /* background-color: #5682c360; */
   justify-content: center;
   font-style: italic;
   padding: 1%;
+  margin: 25%;
+  margin: 3% 40%;
 }
 
-.search_area{
+.search-form__wrapper {
   display: grid;
-  grid-template-columns: 90% 10%;
+  grid-template-columns: 78% 22%;
   padding: 1%;
 }
 
-.search_input{
+.search-form__wrapper-area {
   background-color:  #bbc6d696;
   border-color:  #bbc6d696;
   border-radius: 5px;
   box-shadow: 0px 0px 1px 1px #bcc6d696;
 }
 
-.search_parameters{
-  width: fit-content;
+.search-form__wrapper-button {
   background-color:  #5682C3;
   color: white;
+  margin: auto;
   font-size: 100%;
   border-radius: 5px;  
   box-shadow: 0px 0px 1px 1px #5682C3;
   border-color:  #5682C3;
 }
 
-.inputs__wrapper{
+.search-form__title {
+  display: grid;
+  text-align: center;
   font-size: 130%;
   font-weight: 600;
-}
+}   
 
-.grid {
+.search-form__input {
   display: grid;
   grid-template-columns: 7% 43% 7% 43%;
   padding: 1%;
-}
-
-.inputs_form{
-margin: 3% 40%;
 }
