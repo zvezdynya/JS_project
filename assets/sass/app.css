@@ -628,14 +628,15 @@ template {
   justify-content: center;
   font-style: italic;
   padding: 1%;
-  margin: 25%;
   margin: 3% 40%;
+  
 }
 
 .search-form__wrapper {
   display: grid;
   grid-template-columns: 78% 22%;
   padding: 1%;
+  margin: 2%;
 }
 
 .search-form__wrapper-area {
@@ -660,6 +661,8 @@ template {
   text-align: center;
   font-size: 130%;
   font-weight: 600;
+  padding: 1%;
+  margin: %;
 }   
 
 .search-form__input {
