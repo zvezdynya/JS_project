@@ -1,23 +1,78 @@
-.header-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 15px;
-    font-style: italic;
-  }
-  .image {
+.header{
+  .header__img-blok {
+    background-image: url("../images/banner.jpg");
     width: 100%;
-    margin-top: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
-  .header-block__Recipies{
-    font-weight: 700;
-    font-size: 250%;
+  .header__title{
+    font-family: $title-font;
+    color: $font-color;
+    position: absolute;
+	  top: 10%;
+	  left: 55vw;
+	  width: 100%;
+    font-weight: 500;
+    font-size: 4vw;
   }
-  .header-block__Restaurant-Search {
-    font-weight: 700;
-    font-size: 250%;
-  }
-  .header-block__Registration {
-    font-weight: 700;
-    font-size: 250%;
-  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 2000px) {
+  .header{
+    .header__img-blok {
+      height: 250px; 
+    }
+}
+}
+
+@media screen and (max-width: 960px) {
+  .header{
+    .header__img-blok {
+      height: 200px; 
+    }
+    .header__title{
+      position: absolute;
+      top: 7%;
+      font-weight: 300;
+    }
+}
+}
+
+@media screen and (max-width: 760px) {
+  .header{
+    .header__img-blok {
+      height: 150px; 
+    }
+    .header__title{
+      position: absolute;
+      top: 5%;
+      font-weight: 200;
+    }
+}
+}
+
+@media screen and (max-width: 600px) {
+  .header{
+    .header__img-blok {
+      height: 150px; 
+    }
+    .header__title{
+      position: absolute;
+      top: 5%;
+      font-weight: 200;
+    }
+}
+}
+
+@media screen and (max-width: 450px) {
+  .header{
+    .header__img-blok {
+      height: 80px; 
+    }
+    .header__title{
+      position: absolute;
+      top: 2%;
+    }
+}
+}
