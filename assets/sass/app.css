@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../fonts/DancingScript-VariableFont_wght.ttf") format("ttf");
+  src: url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&family=Diphylleia&family=Shadows+Into+Light&display=swap") format("ttf");
   font-style: normal;
 }
 
@@ -458,7 +458,7 @@ template {
   font-family: "Dancing Script", serif;
   color: #20334F;
   position: absolute;
-  top: 10%;
+  top: 3%;
   left: 55vw;
   width: -moz-fit-content;
   width: fit-content;
@@ -467,17 +467,17 @@ template {
 }
 
 @media screen and (min-width: 960px) and (max-width: 2000px) {
-  .header .header__img-blok {
+  .header__img-blok {
     height: 250px;
   }
 }
 
 @media screen and (max-width: 960px) {
-  .header .header__img-blok {
+  .header__img-blok {
     height: 200px;
   }
 
-  .header .header__title {
+  .header__title {
     position: absolute;
     top: 7%;
     font-weight: 300;
@@ -485,11 +485,11 @@ template {
 }
 
 @media screen and (max-width: 760px) {
-  .header .header__img-blok {
+  .header__img-blok {
     height: 150px;
   }
 
-  .header .header__title {
+  .header__title {
     position: absolute;
     top: 5%;
     font-weight: 200;
@@ -497,11 +497,11 @@ template {
 }
 
 @media screen and (max-width: 600px) {
-  .header .header__img-blok {
+  .header__img-blok {
     height: 150px;
   }
 
-  .header .header__title {
+  .header__title {
     position: absolute;
     top: 5%;
     font-weight: 200;
@@ -509,11 +509,11 @@ template {
 }
 
 @media screen and (max-width: 450px) {
-  .header .header__img-blok {
+  .header__img-blok {
     height: 80px;
   }
 
-  .header .header__title {
+  .header__title {
     position: absolute;
     top: 2%;
   }
