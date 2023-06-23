@@ -144,12 +144,9 @@ const noOilCheckbox = document.getElementById("no_oil");
 const seaFoodCheckbox = document.getElementById("seafood");
 
 //Dinara
+
 const searchButton = document.querySelector(".search_parameters");
 const form = document.querySelector(".inputs_form");
-
-searchButton.addEventListener("click", () => {
-  sendApiRequest();
-});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Предотвратить отправку данных формы
@@ -157,17 +154,15 @@ form.addEventListener("submit", (event) => {
 });
 
 async function sendApiRequest() {
-  const loader = document.getElementById("loader");
-  loader.style.display = "block"; // Показать лоадер
   try {
     const appId = "3a18015c"; // индив. данные из сайта edamam
     const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; // индив. данные из сайта edamam
-    const appIdDatabase = "d73534aa";
-    const appKeyDatabase = "daae4bb9ceeeec1ce5968446c6af50f9";
+    // const appIdDatabase = "d73534aa";
+    // const appKeyDatabase = "daae4bb9ceeeec1ce5968446c6af50f9";
     const searchRecipe = document.querySelector(".search_input");
     let searchRecipeValue = searchRecipe.value;
 
-    loader.style.display = "block"; // Показать лоадер
+    clearRecipes();
 
     let response = await fetch(
       `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRecipeValue}`
@@ -181,14 +176,18 @@ async function sendApiRequest() {
   } catch (error) {
     document.querySelector(".cards__container").textContent =
       "Server is not responding";
-  } finally {
-    loader.style.display = "none"; // Скрыть лоадер после загрузки
   }
+  //  finally {
+  // }
+}
+
+function clearRecipes() {
+  const cardsInner = document.querySelector(".cards__container");
+  cardsInner.innerHTML = "";
 }
 
 function useApiData(data) {
   const cardsInner = document.querySelector(".cards__container");
-  cardsInner.innerHTML = "";
 
   if (data.hits.length === 0) {
     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
