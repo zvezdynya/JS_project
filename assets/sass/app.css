@@ -505,7 +505,6 @@ template {
   stroke-dashoffset: 0;
 }
 .random__wrapper .random__card-wrapper .random__card-items {
-  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: hidden;

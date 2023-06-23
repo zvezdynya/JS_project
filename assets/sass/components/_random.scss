@@ -1,3 +1,7 @@
+body {
+    //overflow: hidden;
+}
+
 .random__wrapper {
     font-family: $main-font;
     margin: 10px 5% 20px;
@@ -48,7 +52,7 @@
         }
 
         .random__card-items {
-            overflow-x: auto;
+            //overflow-x: auto;
             -ms-overflow-style: none;
             scrollbar-width: none;
             overflow-y: hidden;
@@ -335,3 +339,4 @@
         }
     }
 }
+
