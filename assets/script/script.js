@@ -1,22 +1,30 @@
 // переменные
 const wrapperRandomBlock = document.querySelector('.random__wrapper');
 const wrapperRandomCards = document.querySelector('.random__card-items');
-const btnSearch = document.querySelector('.search_parameters');
-const button = document.querySelector('.arrow-4');
+const cardsInner = document.querySelector(".cards__container");
+const searchButton = document.querySelector(".search_parameters");
+const form = document.querySelector(".inputs_form");
+const appId = "3a18015c";
+const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
+const loader = document.getElementById("loader");
 const dishTypes = [`Biscuits and cookies`, `Bread`, `Cereals`, `Condiments and sauces`, `Drinks`, `Desserts`, `Egg`, `Main course`, `Omelet`, `Pancake`, `Preps`, `Preserve`, `Salad`, `Sandwiches`, `Soup`, `Starter`]; // массив типов блюд для выбора рандомных карточек
+const randomParamSearch = Math.floor(Math.random()*dishTypes.length);
 
 // блок с функциями
+//что-то прячем
 function hiddenSometh(something) {
   something.style.display = 'none';
 }
+//что-то показываем
 function viewSometh(something) {
   something.style.display = 'block';
 }
 
+//работа стрелок
 function sideScroll(element,direction,speed,distance,step){
     scrollAmount = 0;
     const slideTimer = setInterval(function(){
-        if(direction == 'left'){
+        if(direction == 'left') {
             element.scrollLeft -= step;
         } else {
             element.scrollLeft += step;
@@ -38,13 +46,14 @@ function redactTotalTime(el) {
   }
 } 
 
-// генерируем html верстку
+// генерируем html верстку random_block
 function createRandomCard(el, stringIngredient) {
   const cardRandomRes = document.createElement('div');
     cardRandomRes.classList.add('random__card-item');
+    //cardRandomRes.style.backgroundImage = `url(${el.recipe.image})`;
+    //<div class="random__card-item" style="background-image: url(${el.recipe.image}); background-size: cover;">
 
-    cardRandomRes.innerHTML = `<div class="random__card-item">
-                                  <span class="border tl"></span>
+    cardRandomRes.innerHTML = `<span class="border tl"></span>
                                   <span class="border tr"></span>
                                   <span class="border bl"></span>
                                   <span class="border br"></span>
@@ -70,9 +79,7 @@ function createRandomCard(el, stringIngredient) {
                                       </div>
                                     </div>
                                   </div>
-                                      
                                       <div class="random__card-body">
-
                                           <div class="random__card-ingridients">
                                               <ul>
                                                   ${stringIngredient}
@@ -80,131 +87,115 @@ function createRandomCard(el, stringIngredient) {
                                           </div>
                                       </div>
                                   </div>
-                                  <a href="${el.recipe.url}" target="_blank" class="cards__url" rel="noopener noreferrer">&#9998 Click to see the recipe</a>
-                              </div>`;
-    return cardRandomRes.innerHTML;
+                                  <a href="${el.recipe.url}" target="_blank" class="cards__url" rel="noopener noreferrer">&#9998 Click to see the recipe</a>`;
+    addCardToHTML(wrapperRandomCards, cardRandomRes);
+}
+
+//функция создания карточек из поиска
+
+function useApiData(data) {
+  cardsInner.innerHTML = "";
+  if (data.hits.length === 0) {
+    cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
+    return;
+  }
+  data.hits.forEach((hit) => {
+    const recipe = hit.recipe;
+    const card = document.createElement("div");
+    card.classList.add("cards__inner");
+    card.style.backgroundImage = `url(${recipe.image})`;
+    card.innerHTML = `
+      <div class="cards__box d-block w-100">
+        <p class="cards__title">${recipe.label}</p>
+        <p>${recipe.dietLabels}</p>
+        <a href="${
+          recipe.url
+        }" target="_blank" class="cards__url" rel="noopener noreferrer">Recipe</a>
+        <div class="cards__box-time-calories">
+          <div class="cards__box-calories">
+            <svg class="cards__calories-img">
+              <use xlink:href="assets/images/icons/sprite.svg#calories"></use>
+            </svg>
+            <div class="cards__calories-text">${Math.round(
+              recipe.calories / recipe.yield
+            )} kcal</div>
+          </div>
+          <div class="cards__box-time">
+            <svg class="cards__time-img">
+              <use xlink:href="assets/images/icons/sprite.svg#time"></use>
+            </svg>
+            <div class="cards__time-text">${redactTotalTime(hit)} mins</div>
+          </div>
+        </div>
+      </div>
+    `;
+  addCardToHTML(cardsInner, card);
+  });
+}
+
+//функция запроса к апи
+
+async function sendApiRequest(searchParam, errorContainer, event) {
+  
+  // loader.style.display = "block"; // Показать лоадер
+  try {
+        //loader.style.display = "block"; // Показать лоадер
+    let response = await fetch(
+      `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchParam}`
+    );
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+    if (event.type == 'click') {
+      useApiData(data);
+    } else if (event.type == 'DOMContentLoaded') {
+      const hitsRcipes = data.hits;
+      let stringIngredient = '';
+      hitsRcipes.forEach(el => {
+        el.recipe.ingredients.forEach(elem => {
+          const ingredient = elem.text;
+          stringIngredient = stringIngredient + `<li>&#10004 ${ingredient}</li>`;
+        });
+        createRandomCard(el, stringIngredient);
+        viewSometh(wrapperRandomBlock);
+      });
+    }
+    
+    //console.log(event.type);
+  } catch (error) {
+    document.querySelector(errorContainer).textContent =
+      "Server is not responding";
+  } finally {
+    //loader.style.display = "none"; // Скрыть лоадер после загрузки
+  }
 }
 
 // добавляем верстку в родительский контейнер на странице
-function addRandomCardToHTML(parentContainer, el, stringIngredient) {
-  parentContainer.innerHTML += createRandomCard(el, stringIngredient);
+function addCardToHTML(parentContainer, card) {
+  parentContainer.appendChild(card);
 }
-
-// при клике по поиску убираем блок рандобных карточек
-btnSearch.addEventListener('click', (e) => {
-  e.preventDefault();
-  wrapperRandomBlock.style.display = 'none';
-});
 
 // блок основного кода
 
 hiddenSometh(wrapperRandomBlock);
 
 // запрос в апи при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  const appId = "3a18015c";
-  const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
-  fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${Math.floor(Math.random()*dishTypes.length)}`)
-  .then((response) => {
-    if (!response.ok) {
-        throw new Error('Unfortunately, the server is not responding. Try using the search.'); 
-    }
-    return response.json();
-  })
-  .then((data) => {
-    const hitsRcipes = data.hits;  
-    let stringIngredient = '';
-    hitsRcipes.forEach(el => {
-      el.recipe.ingredients.forEach(elem => {
-      const ingredient = elem.text;
-        
-      stringIngredient = stringIngredient + `<li>&#10004 ${ingredient}</li>`;
-    });
-    addRandomCardToHTML(wrapperRandomCards, el, stringIngredient);
-    viewSometh(wrapperRandomBlock);
-  })
-
-  .catch((error) => {
-    wrapperRandomCards.innerHTML = `<p class="errorText">${error.message}</p>`;
-  });
+document.addEventListener('DOMContentLoaded', (e) => {
+  console.log(e.type);
+  sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
+});
   
-  // .finally(() => {
-   
-  });
+//Dinara
+searchButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(e.type);
+  const searchRecipe = document.querySelector(".search_input");
+  let searchRecipeValue = searchRecipe.value;
+  hiddenSometh(wrapperRandomBlock);
+  sendApiRequest(searchRecipeValue, '.cards__container', e);
+  searchRecipe.value = ""; // Очистить значение инпута
 });
 
-  
-// //Dinara
-// const searchButton = document.querySelector(".search_parameters");
-// const form = document.querySelector(".inputs_form");
-// searchButton.addEventListener("click", () => {
-//   sendApiRequest();
-// });
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault(); // Предотвратить отправку данных формы
-//   sendApiRequest();
-// });
-// async function sendApiRequest() {
-//   const loader = document.getElementById("loader");
-//   loader.style.display = "block"; // Показать лоадер
-//   try {
-//     const appId = "3a18015c"; // индив. данные из сайта edamam
-//     const appKey = "bce0ab11b6000bbc62ee88ac22680e5b"; // индив. данные из сайта edamam
-//     const searchRecipe = document.querySelector(".search_input");
-//     let searchRecipeValue = searchRecipe.value;
-//     loader.style.display = "block"; // Показать лоадер
-//     let response = await fetch(
-//       `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchRecipeValue}`
-//     );
-//     console.log(response);
-//     let data = await response.json();
-//     console.log(data);
-//     useApiData(data);
-//     searchRecipe.value = ""; // Очистить значение инпута
-//   } catch (error) {
-//     document.querySelector(".cards__container").textContent =
-//       "Server is not responding";
-//   } finally {
-//     loader.style.display = "none"; // Скрыть лоадер после загрузки
-//   }
-// }
-// function useApiData(data) {
-//   const cardsInner = document.querySelector(".cards__container");
-//   cardsInner.innerHTML = "";
-//   if (data.hits.length === 0) {
-//     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
-//     return;
-//   }
-//   data.hits.forEach((hit) => {
-//     const recipe = hit.recipe;
-//     const card = document.createElement("div");
-//     card.classList.add("cards__inner");
-//     card.style.backgroundImage = `url(${recipe.image})`;
-//     card.innerHTML = `
-//       <div class="cards__box d-block w-100">
-//         <p class="cards__title">${recipe.label}</p>
-//         <p>${recipe.dietLabels}</p>
-//         <a href="${
-//           recipe.url
-//         }" target="_blank" class="cards__url" rel="noopener noreferrer">Recipe</a>
-//         <div class="cards__box-time-calories">
-//           <div class="cards__box-calories">
-//             <svg class="cards__calories-img">
-//               <use xlink:href="assets/images/icons/sprite.svg#calories"></use>
-//             </svg>
-//             <div class="cards__calories-text">${Math.round(
-//               recipe.calories / recipe.yield
-//             )} kcal</div>
-//           </div>
-//           <div class="cards__box-time">
-//             <svg class="cards__time-img">
-//               <use xlink:href="assets/images/icons/sprite.svg#time"></use>
-//             </svg>
-//             <div class="cards__time-text">${recipe.totalTime} mins</div>
-//           </div>
-//         </div>
-//       </div>
-//     `;
-//     cardsInner.appendChild(card);
-//   });
-// }
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Предотвратить отправку данных формы
+});

@@ -2,9 +2,13 @@
   padding-top: 30px;
   width: 90vw;
   margin: 10px auto;
+
   .cards__container {
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    // flex-wrap: wrap;
+
+    
   }
   .cards__inner {
     width: 200px;
@@ -61,9 +65,49 @@
     text-align: center;
     font-weight: 800;
   }
-  // .cards__slider {
-  //   max-width: 20%;
-  // }
+  
+
+  .cards__swiper{
+  .cards__slider {
+    display: flex;
+    max-width: max-content;    
+
+    .arrow-3-icon {
+      transform: rotate(180deg);
+  }
+
+  .arrow-3-card, .arrow-4-card {
+      color: #337AB7;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 36px;
+      height: 36px;
+      line-height: 18px; 
+      display: inline-block; 
+  }
+  .arrow-3-card .arrow-3-icon,
+  .arrow-4 .arrow-4-icon {
+      position: relative;
+      top: -1px;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+  }
+  .arrow-3-card .arrow-3-iconcircle, 
+  .arrow-4-card .arrow-4-iconcircle {
+      transition: stroke-dashoffset .3s ease;
+      stroke-dasharray: 95;
+      stroke-dashoffset: 95;
+  }
+  .arrow-3-card:hover .arrow-3-icon, 
+  .arrow-4-card:hover .arrow-4-icon {
+      transform: translate3d(5px, 0, 0);
+  }
+  .arrow-3-card:hover .arrow-3-iconcircle,
+  .arrow-4-card:hover .arrow-4-iconcircle {
+      stroke-dashoffset: 0;
+  }
+  }
+}
 
   #loader {
     width: 40px;

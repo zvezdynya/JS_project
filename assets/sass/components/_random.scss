@@ -16,39 +16,28 @@ body {
         flex-direction: row;
         align-items: center;
 
-        .arrow-3, .arrow-3-mob {
-            transform: rotate(180deg);
+        .arrow-3-icon {
+            @include arrow-transform;
         }
 
         .arrow-3, .arrow-4 {
-            color: #337AB7;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 36px;
-            height: 36px;
-            line-height: 18px; 
-            display: inline-block; 
+            @include arrow;
         }
         .arrow-3 .arrow-3-icon,
         .arrow-4 .arrow-4-icon {
-            position: relative;
-            top: -1px;
-            transition: transform 0.3s ease;
-            vertical-align: middle;
+            @include arrow-icon;
         }
         .arrow-3 .arrow-3-iconcircle, 
         .arrow-4 .arrow-4-iconcircle {
-            transition: stroke-dashoffset .3s ease;
-            stroke-dasharray: 95;
-            stroke-dashoffset: 95;
+            @include arrow-iconcircle;
         }
         .arrow-3:hover .arrow-3-icon, 
         .arrow-4:hover .arrow-4-icon {
-            transform: translate3d(5px, 0, 0);
+            @include arrow-hover__arrow-icon ;
         }
         .arrow-3:hover .arrow-3-iconcircle,
         .arrow-4:hover .arrow-4-iconcircle {
-            stroke-dashoffset: 0;
+            @include arrow-hover__arrow-iconcircle;
         }
 
         .random__card-items {
@@ -235,40 +224,28 @@ body {
             justify-content: center;
             margin: 10px;
 
-            .arrow-3-mob {
-                transform: rotate(180deg);
+            .arrow-3-icon {
+                @include arrow-transform;
             }
     
             .arrow-3-mob, .arrow-4-mob {
-                margin: 3px 40px;
-                color: #337AB7;
-                cursor: pointer;
-                text-decoration: none;
-                font-size: 36px;
-                height: 36px;
-                line-height: 18px; 
-                display: inline-block; 
+                @include arrow(3px 40px);
             }
             .arrow-3-mob .arrow-3-icon,
             .arrow-4-mob .arrow-4-icon {
-                position: relative;
-                top: -1px;
-                transition: transform 0.3s ease;
-                vertical-align: middle;
+                @include arrow-icon
             }
             .arrow-3-mob .arrow-3-iconcircle,
             .arrow-4-mob .arrow-4-iconcircle {
-                transition: stroke-dashoffset .3s ease;
-                stroke-dasharray: 95;
-                stroke-dashoffset: 95;
+                @include arrow-iconcircle;
             }
             .arrow-3-mob:hover .arrow-3-icon,
             .arrow-4-mob:hover .arrow-4-icon {
-                transform: translate3d(5px, 0, 0);
+                @include arrow-hover__arrow-icon;
             }
             .arrow-3-mob:hover .arrow-3-iconcircle, 
             .arrow-4-mob:hover .arrow-4-iconcircle {
-                stroke-dashoffset: 0;
+                @include arrow-hover__arrow-iconcircle
             }
         }
     
