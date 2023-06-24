@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/sass/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="icon" href="assets/icons/page_icon.png" />
     <title>Yummy!</title>
   </head>
@@ -14,7 +18,7 @@
       <!-- Шахноз начало-->
       <header class="header">
         <div class="header__img-blok">
-          <div class="header__title">Be the chef of your <br />kitchen!</div>
+          <h1 class="header__title">Be the chef of your <br />kitchen!</h1>
         </div>
       </header>
       <!-- Шахноз конец-->
@@ -232,7 +236,7 @@
             <div class="cards__slider">
               <div
                 class="arrow-3-card random__arrow"
-                onclick="sideScroll(cardsInner,'left',50,600,40)"
+                onclick="sideScroll(cardsInner,'left',10,400,20)"
               >
                 <svg
                   class="arrow-3-icon"
@@ -262,11 +266,11 @@
                 </svg>
               </div>
               <div class="cards__container">
-                <div id="loader"></div>
+                <!-- <div id="loader"></div> -->
               </div>
               <div
                 class="arrow-4-card random__arrow"
-                onclick="sideScroll(cardsInner,'right',50,600,40)"
+                onclick="sideScroll(cardsInner,'right',10,400,20)"
               >
                 <svg
                   class="arrow-4-icon"

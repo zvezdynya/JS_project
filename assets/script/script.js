@@ -1,12 +1,13 @@
 // переменные
 const wrapperRandomBlock = document.querySelector(".random__wrapper");
 const wrapperRandomCards = document.querySelector(".random__card-items");
+const cardsBlock = document.querySelector(".cards");
 const cardsInner = document.querySelector(".cards__container");
 const searchButton = document.querySelector(".search_parameters");
 const form = document.querySelector(".inputs_form");
 const appId = "3a18015c";
 const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
-const loader = document.getElementById("loader");
+const loader = `<div id="loader"></div>`;
 const dishTypes = [
   `Biscuits and cookies`,
   `Bread`,
@@ -26,6 +27,7 @@ const dishTypes = [
   `Starter`,
 ]; // массив типов блюд для выбора рандомных карточек
 const randomParamSearch = Math.floor(Math.random() * dishTypes.length);
+
 // блок с функциями
 //что-то прячем
 function hiddenSometh(something) {
@@ -35,6 +37,7 @@ function hiddenSometh(something) {
 function viewSometh(something) {
   something.style.display = "block";
 }
+
 //работа стрелок
 function sideScroll(element, direction, speed, distance, step) {
   scrollAmount = 0;
@@ -50,6 +53,7 @@ function sideScroll(element, direction, speed, distance, step) {
     }
   }, speed);
 }
+
 // редактируем время, если оно 0mins
 function redactTotalTime(el) {
   let stringTotalTime = "";
@@ -59,12 +63,13 @@ function redactTotalTime(el) {
     return (stringTotalTime = el.recipe.totalTime);
   }
 }
+
 // генерируем html верстку random_block
 function createRandomCard(el, stringIngredient) {
+  /* wrapperRandomCards.innerHTML = ''; */
   const cardRandomRes = document.createElement("div");
   cardRandomRes.classList.add("random__card-item");
-  //cardRandomRes.style.backgroundImage = `url(${el.recipe.image})`;
-  //<div class="random__card-item" style="background-image: url(${el.recipe.image}); background-size: cover;">
+
   cardRandomRes.innerHTML = `<span class="border tl"></span>
                                   <span class="border tr"></span>
                                   <span class="border bl"></span>
@@ -106,11 +111,13 @@ function createRandomCard(el, stringIngredient) {
                                   <a href="${
                                     el.recipe.url
                                   }" target="_blank" class="cards__url" rel="noopener noreferrer">&#9998 Click to see the recipe</a>`;
-  addRandomCardToHTML(wrapperRandomCards, cardRandomRes);
+  addCardToHTML(wrapperRandomCards, cardRandomRes);
 }
+
 //функция создания карточек из поиска
+
 function useApiData(data) {
-  cardsInner.innerHTML = "";
+  cardsInner.innerHTML = loader;
   if (data.hits.length === 0) {
     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
@@ -121,7 +128,7 @@ function useApiData(data) {
     card.classList.add("cards__inner");
     card.style.backgroundImage = `url(${recipe.image})`;
     card.innerHTML = `
-      <div class="cards__box d-block w-100">
+      <div class="cards__box">
         <p class="cards__title">${recipe.label}</p>
         <p>${recipe.healthLabels[0]}, ${recipe.healthLabels[1]},
         ${recipe.healthLabels[2]}</p>
@@ -146,14 +153,14 @@ function useApiData(data) {
         </div>
       </div>
     `;
-    addRandomCardToHTML(cardsInner, card);
+    addCardToHTML(cardsInner, card);
   });
 }
+
 //функция запроса к апи
 async function sendApiRequest(searchParam, errorContainer, event) {
-  // loader.style.display = "block"; // Показать лоадер
+  cardsInner.innerHTML = "";
   try {
-    //loader.style.display = "block"; // Показать лоадер
     let response = await fetch(
       `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchParam}`
     );
@@ -175,28 +182,37 @@ async function sendApiRequest(searchParam, errorContainer, event) {
         viewSometh(wrapperRandomBlock);
       });
     }
+
     //console.log(event.type);
   } catch (error) {
     document.querySelector(errorContainer).textContent =
       "Server is not responding";
-  } finally {
-    //loader.style.display = "none"; // Скрыть лоадер после загрузки
   }
+  // } finally {
+  //   loader.style.display = "none"; // Скрыть лоадер после загрузки
+  // }
 }
+
 // добавляем верстку в родительский контейнер на странице
-function addRandomCardToHTML(parentContainer, card) {
+function addCardToHTML(parentContainer, card) {
   parentContainer.appendChild(card);
 }
+
 // блок основного кода
+
 hiddenSometh(wrapperRandomBlock);
+
 // запрос в апи при загрузке страницы
 document.addEventListener("DOMContentLoaded", (e) => {
+  wrapperRandomCards.innerHTML = loader;
   console.log(e.type);
   sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
 });
-//функция для клика
+
+//Dinara
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
+  viewSometh(cardsBlock);
   console.log(e.type);
   const searchRecipe = document.querySelector(".search_input");
   let searchRecipeValue = searchRecipe.value;
@@ -204,6 +220,7 @@ searchButton.addEventListener("click", (e) => {
   sendApiRequest(searchRecipeValue, ".cards__container", e);
   searchRecipe.value = ""; // Очистить значение инпута
 });
+
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Предотвратить отправку данных формы
 });

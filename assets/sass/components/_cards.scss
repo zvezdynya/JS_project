@@ -1,19 +1,28 @@
 .cards {
   padding-top: 30px;
-  width: 30vw;
+  width: 95vw;
   margin: 10px auto;
+  display: none;
+
   .cards__container {
+    overflow-y: hidden;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    width: max-content;
   }
+  .cards__container::-webkit-scrollbar {
+    width: 0;
+  }
+
   .cards__inner {
-    width: 200px;
-    height: 250px;
+    max-width: max-content;
+    max-height: 300px;
     border-radius: 15px;
     padding: 5px;
     margin: 5px;
+    position: relative;
   }
+
   .cards__box {
     background-image: linear-gradient(
       141deg,
@@ -31,20 +40,25 @@
     border-radius: 15px;
     height: 80%;
     color: black;
+    width: 150px;
   }
+
   .cards__calories-img {
     width: 25px;
     height: 25px;
   }
+
   .cards__time-img {
     width: 18px;
     height: 25px;
   }
+
   .cards__box-time-calories {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
   }
+
   .cards__box-time,
   .cards__box-calories {
     display: flex;
@@ -52,6 +66,7 @@
     align-items: center;
     justify-content: space-around;
   }
+
   .cards__url {
     text-decoration: none;
     color: $color-basic;
@@ -71,6 +86,7 @@
   .cards__slider {
     display: flex;
     max-width: max-content;
+    align-items: center;
   }
   .arrow-3-icon {
     transform: rotate(180deg);
@@ -98,6 +114,10 @@
     transition: stroke-dashoffset 0.3s ease;
     stroke-dasharray: 95;
     stroke-dashoffset: 95;
+  }
+  .arrow-3-card,
+  .arrow-4-card {
+    margin: 0 10px 0 10px;
   }
   .arrow-3-card:hover .arrow-3-icon,
   .arrow-4-card:hover .arrow-4-icon {
@@ -131,7 +151,6 @@
   @media screen and (max-width: 992px) {
     width: 98vw;
     .cards__inner {
-      width: 150px;
       height: 200px;
       padding: 2px;
       margin: 2px;
@@ -143,10 +162,12 @@
       height: 90%;
       font-size: 11px;
     }
+    .cards__box {
+      width: 110px;
+    }
   }
   @media screen and (max-width: 600px) {
     .cards__inner {
-      width: 120px;
       height: 180px;
       padding: 2px;
       margin: 2px;
@@ -157,6 +178,9 @@
       border-radius: 15px;
       height: 90%;
       font-size: 11px;
+    }
+    .cards__box {
+      width: 90px;
     }
   }
 }
