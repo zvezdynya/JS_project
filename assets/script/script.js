@@ -3,8 +3,8 @@ const wrapperRandomBlock = document.querySelector(".random__wrapper");
 const wrapperRandomCards = document.querySelector(".random__card-items");
 const cardsBlock = document.querySelector(".cards");
 const cardsInner = document.querySelector(".cards__container");
-const searchButton = document.querySelector(".search_parameters");
-const form = document.querySelector(".inputs_form");
+const searchButton = document.querySelector(".search-form__wrapper-button");
+const form = document.querySelector(".search-form");
 const appId = "3a18015c";
 const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
 const loader = `<div id="loader"></div>`;
@@ -209,12 +209,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
   sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
 });
 
-//Dinara
+//событие клик для поиска рецептов
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
   viewSometh(cardsBlock);
   console.log(e.type);
-  const searchRecipe = document.querySelector(".search_input");
+  const searchRecipe = document.querySelector(".search-form__wrapper-area");
   let searchRecipeValue = searchRecipe.value;
   hiddenSometh(wrapperRandomBlock);
   sendApiRequest(searchRecipeValue, ".cards__container", e);

@@ -6,13 +6,13 @@
     background-size: cover;
     background-position: center;
   }
-  .header__title {
-    font-family: $title-font;
+  .header__title{
+    font-family: $main-font;
     color: $font-color;
     position: absolute;
-    top: 3%;
-    left: 55vw;
-    width: fit-content;
+	  top: 2%;
+	  left: 55vw;
+	  width: fit-content;
     font-weight: 500;
     font-size: 4vw;
   }

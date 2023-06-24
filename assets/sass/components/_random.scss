@@ -91,14 +91,9 @@
           margin-left: 10%;
         }
 
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
+        .arrow-3,
+        .arrow-4 {
+          @include arrow(0);
         }
 
         a {
