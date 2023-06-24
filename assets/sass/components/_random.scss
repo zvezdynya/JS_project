@@ -21,7 +21,7 @@ body {
         }
 
         .arrow-3, .arrow-4 {
-            @include arrow;
+            @include arrow(3px 40px);
         }
         .arrow-3 .arrow-3-icon,
         .arrow-4 .arrow-4-icon {
