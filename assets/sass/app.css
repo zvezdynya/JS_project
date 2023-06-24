@@ -311,6 +311,7 @@ template {
 }
 
 .cards {
+  font-family: "Diphylleia", serif;
   padding-top: 30px;
   width: 95vw;
   margin: 10px auto;
@@ -329,7 +330,7 @@ template {
 .cards .cards__inner {
   max-width: -moz-max-content;
   max-width: max-content;
-  max-height: 300px;
+  max-height: 350px;
   border-radius: 15px;
   padding: 5px;
   margin: 5px;
@@ -345,7 +346,7 @@ template {
   margin: 20px;
   padding: 10px;
   border-radius: 15px;
-  height: 80%;
+  height: 75%;
   color: black;
   width: 150px;
 }
