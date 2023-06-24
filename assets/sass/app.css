@@ -740,12 +740,12 @@ template {
   }
 }
 
-@media screen and (max-width: 2000px){
+@media screen and (min-width: 769px){
   .search-form {
     display: flex;
+    margin: 0% 28% 0% 28%;
     flex-direction: column; 
     justify-content: center;
-    margin: 0% 28% 0% 28%;
   }
   
   .search-form__wrapper {
@@ -754,35 +754,33 @@ template {
   }
   
   .search-form__wrapper-area {
-    background-color:  #bbc6d696;
     width: 75%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:  #bbc6d696;
     border-color:  #bbc6d696;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px #bcc6d696;
-    margin-top: 2%;
-    margin-bottom: 2%;
   }
   
   .search-form__wrapper-button {
-    background-color:  #5682C3;
-    color: white;
-    margin: auto;
     width: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-size: 100%;
+    color: white;
+    background-color:  #5682C3;
     border-radius: 5px;  
     box-shadow: 0px 0px 1px 1px #5682C3;
     border-color:  #5682C3;
-    margin-top: 2%;
-    margin-bottom: 2%;
   }
   
   .search-form__title {
-
-    text-align: center;
-    font-size: 100%;
-    font-weight: 600;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-size: 100%;
+    font-weight: 600;
+    text-align: center;
   }   
   
   .search-form__input {
@@ -800,47 +798,45 @@ template {
 @media screen and (max-width: 768px){
   .search-form {
     display: flex;
+    margin: 0% 23% 0% 23%;
     flex-direction: column; 
     justify-content: center;
-   margin: 0% 23% 0% 23%;
   }
   
   .search-form__wrapper {
-
     display: block;
     padding: 1%;
   }
   
   .search-form__wrapper-area {
-    background-color:  #bbc6d696;
     width: 75%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:  #bbc6d696;
     border-color:  #bbc6d696;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px #bcc6d696;
-    margin-top: 2%;
-    margin-bottom: 2%;
   }
   
   .search-form__wrapper-button {
-    background-color:  #5682C3;
-    color: white;
-    margin: auto;
     width: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-size: 100%;
+    color: white;
+    background-color:  #5682C3;
     border-radius: 5px;  
     box-shadow: 0px 0px 1px 1px #5682C3;
     border-color:  #5682C3;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    
   }
   
   .search-form__title {
-
-    text-align: center;
-    font-size: 100%;
-    font-weight: 600;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-size: 100%;
+    font-weight: 600;
+    text-align: center;
   }   
   
   .search-form__input {
@@ -858,9 +854,9 @@ template {
 @media screen and (max-width: 450px){
   .search-form {
       display: flex;
+      margin: 0% 10% 0% 10%;
       flex-direction: column; 
       justify-content: center;
-     margin: 0% 10% 0% 10%;
     }
     
     .search-form__wrapper {
@@ -869,33 +865,33 @@ template {
     }
     
     .search-form__wrapper-area {
+      width: 70%;
+      margin-top: 2%;
+      margin-bottom: 2%;
       background-color:  #bbc6d696;
       border-color:  #bbc6d696;
       border-radius: 5px;
       box-shadow: 0px 0px 1px 1px #bcc6d696;
-      margin-top: 2%;
-      margin-bottom: 2%;
     }
     
     .search-form__wrapper-button {
-      background-color:  #5682C3;
-      color: white;
-      margin: auto;
+      width: 20%;
+      margin-top: 2%;
+      margin-bottom: 2%;
       font-size: 100%;
+      color: white;
+      background-color:  #5682C3;
       border-radius: 5px;  
       box-shadow: 0px 0px 1px 1px #5682C3;
       border-color:  #5682C3;
-      margin-top: 2%;
-      margin-bottom: 2%;
     }
     
     .search-form__title {
-  
-      text-align: center;
-      font-size: 100%;
-      font-weight: 600;
       margin-top: 2%;
       margin-bottom: 2%;
+      font-size: 100%;
+      font-weight: 600;
+      text-align: center;
     }   
     
     .search-form__input {
