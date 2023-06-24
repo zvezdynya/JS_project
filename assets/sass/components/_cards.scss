@@ -6,10 +6,9 @@
   .cards__container {
     display: flex;
     overflow-x: auto;
-    // flex-wrap: wrap;
-
-    
+    // flex-wrap: wrap;    
   }
+
   .cards__inner {
     width: 200px;
     height: 250px;
@@ -17,12 +16,11 @@
     padding: 5px;
     margin: 5px;
   }
+
   .cards__box {
-    background-image: linear-gradient(
-      336deg,
-      rgb(62 146 170 / 87%) 0%,
-      rgba(147, 251, 157, 0.0862745098) 100%
-    );
+    background-image: linear-gradient(336deg,
+        rgb(62 146 170 / 87%) 0%,
+        rgba(147, 251, 157, 0.0862745098) 100%);
     box-shadow: rgb(51 55 59 / 23%) 6px 2px 16px 0px,
       rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     display: flex;
@@ -35,20 +33,24 @@
     height: 80%;
     color: black;
   }
+
   .cards__calories-img {
     width: 25px;
     height: 25px;
   }
+
   .cards__time-img {
     width: 18px;
     height: 25px;
   }
+
   .cards__box-time-calories {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     width: 100%;
   }
+
   .cards__box-time,
   .cards__box-calories {
     display: flex;
@@ -56,58 +58,65 @@
     align-items: center;
     justify-content: space-around;
   }
+
   .cards__url {
     text-decoration: none;
     color: $bgcolor;
     cursor: pointer;
   }
+
   .cards__title {
     text-align: center;
     font-weight: 800;
   }
-  
 
-  .cards__swiper{
-  .cards__slider {
-    display: flex;
-    max-width: max-content;    
 
-    .arrow-3-icon {
-      transform: rotate(180deg);
-  }
+  .cards__swiper {
+    .cards__slider {
+      display: flex;
+      max-width: max-content;
 
-  .arrow-3-card, .arrow-4-card {
-      color: #337AB7;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 36px;
-      height: 36px;
-      line-height: 18px; 
-      display: inline-block; 
+      .arrow-3-icon {
+        transform: rotate(180deg);
+      }
+
+      .arrow-3-card,
+      .arrow-4-card {
+        color: #337AB7;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 36px;
+        height: 36px;
+        line-height: 18px;
+        display: inline-block;
+      }
+
+      .arrow-3-card .arrow-3-icon,
+      .arrow-4 .arrow-4-icon {
+        position: relative;
+        top: -1px;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+      }
+
+      .arrow-3-card .arrow-3-iconcircle,
+      .arrow-4-card .arrow-4-iconcircle {
+        transition: stroke-dashoffset .3s ease;
+        stroke-dasharray: 95;
+        stroke-dashoffset: 95;
+      }
+
+      .arrow-3-card:hover .arrow-3-icon,
+      .arrow-4-card:hover .arrow-4-icon {
+        transform: translate3d(5px, 0, 0);
+      }
+
+      .arrow-3-card:hover .arrow-3-iconcircle,
+      .arrow-4-card:hover .arrow-4-iconcircle {
+        stroke-dashoffset: 0;
+      }
+    }
   }
-  .arrow-3-card .arrow-3-icon,
-  .arrow-4 .arrow-4-icon {
-      position: relative;
-      top: -1px;
-      transition: transform 0.3s ease;
-      vertical-align: middle;
-  }
-  .arrow-3-card .arrow-3-iconcircle, 
-  .arrow-4-card .arrow-4-iconcircle {
-      transition: stroke-dashoffset .3s ease;
-      stroke-dasharray: 95;
-      stroke-dashoffset: 95;
-  }
-  .arrow-3-card:hover .arrow-3-icon, 
-  .arrow-4-card:hover .arrow-4-icon {
-      transform: translate3d(5px, 0, 0);
-  }
-  .arrow-3-card:hover .arrow-3-iconcircle,
-  .arrow-4-card:hover .arrow-4-iconcircle {
-      stroke-dashoffset: 0;
-  }
-  }
-}
 
   #loader {
     width: 40px;
@@ -116,7 +125,6 @@
     border-top: 4px solid #3498db;
     border-radius: 50%;
     animation: spin 2s linear infinite;
-    display: none;
     margin-bottom: 20%;
     margin-left: 10%;
   }
@@ -125,20 +133,21 @@
     0% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(360deg);
     }
   }
-  @media screen and (min-width: 3000px) {
-  }
-  @media screen and (max-width: 2500px) {
-  }
-  @media screen and (max-width: 1280px) {
-  }
-  @media screen and (max-width: 992px) {
-  }
-  @media screen and (max-width: 768px) {
-  }
-  @media screen and (max-width: 600px) {
-  }
+
+  @media screen and (min-width: 3000px) {}
+
+  @media screen and (max-width: 2500px) {}
+
+  @media screen and (max-width: 1280px) {}
+
+  @media screen and (max-width: 992px) {}
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 600px) {}
 }

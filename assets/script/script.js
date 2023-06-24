@@ -6,7 +6,7 @@ const searchButton = document.querySelector(".search_parameters");
 const form = document.querySelector(".inputs_form");
 const appId = "3a18015c";
 const appKey = "bce0ab11b6000bbc62ee88ac22680e5b";
-const loader = document.getElementById("loader");
+const loader = `<div id="loader"></div>`;
 const dishTypes = [`Biscuits and cookies`, `Bread`, `Cereals`, `Condiments and sauces`, `Drinks`, `Desserts`, `Egg`, `Main course`, `Omelet`, `Pancake`, `Preps`, `Preserve`, `Salad`, `Sandwiches`, `Soup`, `Starter`]; // массив типов блюд для выбора рандомных карточек
 const randomParamSearch = Math.floor(Math.random()*dishTypes.length);
 
@@ -48,10 +48,9 @@ function redactTotalTime(el) {
 
 // генерируем html верстку random_block
 function createRandomCard(el, stringIngredient) {
+  wrapperRandomCards.innerHTML = '';
   const cardRandomRes = document.createElement('div');
     cardRandomRes.classList.add('random__card-item');
-    //cardRandomRes.style.backgroundImage = `url(${el.recipe.image})`;
-    //<div class="random__card-item" style="background-image: url(${el.recipe.image}); background-size: cover;">
 
     cardRandomRes.innerHTML = `<span class="border tl"></span>
                                   <span class="border tr"></span>
@@ -94,7 +93,7 @@ function createRandomCard(el, stringIngredient) {
 //функция создания карточек из поиска
 
 function useApiData(data) {
-  cardsInner.innerHTML = "";
+  cardsInner.innerHTML = loader;
   if (data.hits.length === 0) {
     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
@@ -134,12 +133,9 @@ function useApiData(data) {
 }
 
 //функция запроса к апи
-
 async function sendApiRequest(searchParam, errorContainer, event) {
-  
-  // loader.style.display = "block"; // Показать лоадер
+  cardsInner.innerHTML = '';
   try {
-        //loader.style.display = "block"; // Показать лоадер
     let response = await fetch(
       `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&q=${searchParam}`
     );
@@ -165,9 +161,10 @@ async function sendApiRequest(searchParam, errorContainer, event) {
   } catch (error) {
     document.querySelector(errorContainer).textContent =
       "Server is not responding";
-  } finally {
-    //loader.style.display = "none"; // Скрыть лоадер после загрузки
   }
+  // } finally {
+  //   loader.style.display = "none"; // Скрыть лоадер после загрузки
+  // }
 }
 
 // добавляем верстку в родительский контейнер на странице
@@ -181,6 +178,7 @@ hiddenSometh(wrapperRandomBlock);
 
 // запрос в апи при загрузке страницы
 document.addEventListener('DOMContentLoaded', (e) => {
+  wrapperRandomCards.innerHTML = loader;
   console.log(e.type);
   sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
 });
