@@ -1,46 +1,46 @@
-@mixin block ($flex-dir,$width,$bg-color){
-    flex-direction: $flex-dir;   
-    width: $width;
-    background-color: $bg-color;
-    display: flex;
-    height: auto;
-    padding: 2rem;
-    box-shadow: 0px 2px 2px $color-basic-dark;
-    border-radius: 15px;
+@mixin block($flex-dir, $width, $bg-color) {
+  flex-direction: $flex-dir;
+  width: $width;
+  background-color: $bg-color;
+  display: flex;
+  height: auto;
+  padding: 2rem;
+  box-shadow: 0px 2px 2px $color-basic-dark;
+  border-radius: 15px;
 }
 
 @mixin arrow-transform {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-@mixin arrow ($margin) {
-    margin: $margin;
-    color: #337AB7;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 36px;
-    height: 36px;
-    line-height: 18px; 
-    display: inline-block; 
+@mixin arrow($margin) {
+  margin: $margin;
+  color: #337ab7;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 36px;
+  height: 36px;
+  line-height: 18px;
+  display: inline-block;
 }
 
 @mixin arrow-icon {
-    position: relative;
-    top: -1px;
-    transition: transform 0.3s ease;
-    vertical-align: middle;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
 }
 
 @mixin arrow-iconcircle {
-    transition: stroke-dashoffset .3s ease;
-    stroke-dasharray: 95;
-    stroke-dashoffset: 95;
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
 }
 
 @mixin arrow-hover__arrow-icon {
-    transform: translate3d(5px, 0, 0);
+  transform: translate3d(5px, 0, 0);
 }
 
 @mixin arrow-hover__arrow-iconcircle {
-    stroke-dashoffset: 0;
+  stroke-dashoffset: 0;
 }
