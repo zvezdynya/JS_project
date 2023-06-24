@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/sass/app.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
     <link rel="icon" href="assets/icons/page_icon.png" />
     <title>Yummy!</title>
   </head>
@@ -101,7 +97,10 @@
         <div class="random__wrapper">
           <h2>A selection of random recipes</h2>
           <div class="random__card-wrapper">
-            <div class="arrow-3 random__arrow">
+            <div
+              class="arrow-3 random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'left',50,600,40)"
+            >
               <svg
                 class="arrow-3-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +129,10 @@
               </svg>
             </div>
             <div class="random__card-items"></div>
-            <div class="arrow-4 random__arrow">
+            <div
+              class="arrow-4 random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'right',50,600,40)"
+            >
               <svg
                 class="arrow-4-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +162,10 @@
             </div>
           </div>
           <div class="random__arrow-block-mob">
-            <div class="arrow-3-mob random__arrow">
+            <div
+              class="arrow-3-mob random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'left',50,250,40)"
+            >
               <svg
                 class="arrow-3-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -188,8 +193,10 @@
                 </g>
               </svg>
             </div>
-            <div class="random__card-items"></div>
-            <div class="arrow-4-mob random__arrow">
+            <div
+              class="arrow-4-mob random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'right',50,250,40)"
+            >
               <svg
                 class="arrow-4-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +230,71 @@
         <div class="cards">
           <div class="cards__swiper">
             <div class="cards__slider">
-              <div class="cards__container"></div>
+              <div
+                class="arrow-3-card random__arrow"
+                onclick="sideScroll(cardsInner,'left',50,600,40)"
+              >
+                <svg
+                  class="arrow-3-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                >
+                  <g
+                    fill="none"
+                    stroke="#337AB7"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                  >
+                    <circle
+                      class="arrow-3-iconcircle"
+                      cx="16"
+                      cy="16"
+                      r="15.12"
+                    ></circle>
+                    <path
+                      class="arrow-3-icon--arrow"
+                      d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="cards__container">
+                <div id="loader"></div>
+              </div>
+              <div
+                class="arrow-4-card random__arrow"
+                onclick="sideScroll(cardsInner,'right',50,600,40)"
+              >
+                <svg
+                  class="arrow-4-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                >
+                  <g
+                    fill="none"
+                    stroke="#337AB7"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                  >
+                    <circle
+                      class="arrow-4-iconcircle"
+                      cx="16"
+                      cy="16"
+                      r="15.12"
+                    ></circle>
+                    <path
+                      class="arrow-4-icon--arrow"
+                      d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

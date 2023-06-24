@@ -322,7 +322,7 @@ template {
 
 .cards {
   padding-top: 30px;
-  width: 90vw;
+  width: 30vw;
   margin: 10px auto;
 }
 .cards .cards__container {
@@ -385,6 +385,45 @@ template {
 .cards .cards__title {
   text-align: center;
   font-weight: 800;
+}
+.cards .cards__slider {
+  display: flex;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.cards .arrow-3-icon {
+  transform: rotate(180deg);
+}
+.cards .arrow-3-card,
+.cards .arrow-4-card {
+  color: #337ab7;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 36px;
+  height: 36px;
+  line-height: 18px;
+  display: inline-block;
+}
+.cards .arrow-3-card .arrow-3-icon,
+.cards .arrow-4 .arrow-4-icon {
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+.cards .arrow-3-card .arrow-3-iconcircle,
+.cards .arrow-4-card .arrow-4-iconcircle {
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.cards .arrow-3-card:hover .arrow-3-icon,
+.cards .arrow-4-card:hover .arrow-4-icon {
+  transform: translate3d(5px, 0, 0);
+}
+.cards .arrow-3-card:hover .arrow-3-iconcircle,
+.cards .arrow-4-card:hover .arrow-4-iconcircle {
+  stroke-dashoffset: 0;
 }
 @media screen and (max-width: 992px) {
   .cards {
@@ -480,286 +519,6 @@ template {
   .header .header__title {
     position: absolute;
     top: 2%;
-  }
-}
-.random__wrapper {
-  font-family: "Diphylleia", serif;
-  margin: 10px 5% 20px;
-}
-.random__wrapper .random__arrow-block-mob {
-  display: none;
-}
-.random__wrapper .random__card-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.random__wrapper .random__card-wrapper .arrow-3, .random__wrapper .random__card-wrapper .arrow-3-mob {
-  transform: rotate(180deg);
-}
-.random__wrapper .random__card-wrapper .arrow-3, .random__wrapper .random__card-wrapper .arrow-4 {
-  color: #337AB7;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 36px;
-  height: 36px;
-  line-height: 18px;
-  display: inline-block;
-}
-.random__wrapper .random__card-wrapper .arrow-3 .arrow-3-icon,
-.random__wrapper .random__card-wrapper .arrow-4 .arrow-4-icon {
-  position: relative;
-  top: -1px;
-  transition: transform 0.3s ease;
-  vertical-align: middle;
-}
-.random__wrapper .random__card-wrapper .arrow-3 .arrow-3-iconcircle,
-.random__wrapper .random__card-wrapper .arrow-4 .arrow-4-iconcircle {
-  transition: stroke-dashoffset 0.3s ease;
-  stroke-dasharray: 95;
-  stroke-dashoffset: 95;
-}
-.random__wrapper .random__card-wrapper .arrow-3:hover .arrow-3-icon,
-.random__wrapper .random__card-wrapper .arrow-4:hover .arrow-4-icon {
-  transform: translate3d(5px, 0, 0);
-}
-.random__wrapper .random__card-wrapper .arrow-3:hover .arrow-3-iconcircle,
-.random__wrapper .random__card-wrapper .arrow-4:hover .arrow-4-iconcircle {
-  stroke-dashoffset: 0;
-}
-.random__wrapper .random__card-wrapper .random__card-items {
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: row;
-  width: -moz-max-content;
-  width: max-content;
-}
-.random__wrapper .random__card-wrapper .random__card-items ::-webkit-scrollbar {
-  display: none;
-}
-.random__wrapper .random__card-wrapper .random__card-items ::-webkit-scrollbar:hover {
-  display: block;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: -moz-max-content;
-  width: max-content;
-  max-height: 300px;
-  padding: 20px 30px;
-  margin: 20px 30px 0;
-  font-size: 17px;
-  line-height: 28px;
-  transform: rotate(-1deg);
-  border: 2px solid transparent;
-  background-image: linear-gradient(90deg, rgba(93, 179, 203, 0.2039215686) 0%, rgba(147, 251, 157, 0.0862745098) 100%);
-  box-shadow: rgba(136, 165, 191, 0.231) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-  transition: all 0.13s ease-in;
-  border-top-left-radius: 37px 140px;
-  border-top-right-radius: 23px 130px;
-  border-bottom-left-radius: 110px 19px;
-  border-bottom-right-radius: 120px 24px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item a {
-  margin: 10px auto;
-  text-decoration: none;
-  color: #20334F;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block {
-  font-size: 12px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories .random__box-calories {
-  display: flex;
-  flex-direction: row;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories .random__box-calories .random__calories-img {
-  height: 25px;
-  width: 25px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories .random__box-time {
-  display: flex;
-  flex-direction: row;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories .random__box-time .random__time-img {
-  height: 20px;
-  width: 20px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories .random__box-time .random__time-text {
-  line-height: 22px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item h3 {
-  height: 50px;
-  margin: 5px 0;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-image {
-  width: 200px;
-  height: 150px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-body {
-  overflow: hidden;
-  width: 300px;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-title {
-  text-align: center;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .wrapper__card-item {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .border {
-  position: absolute;
-  transition: all 0.13s ease-in;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .tl {
-  position: absolute;
-  left: -50px;
-  top: -63px;
-  font-weight: 600;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .tr {
-  right: -50px;
-  top: -63px;
-  font-weight: 600;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .bl {
-  left: -50px;
-  bottom: -71px;
-  font-weight: 600;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .br {
-  right: -50px;
-  bottom: -63px;
-  font-weight: 600;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-ingridients {
-  overflow-y: auto;
-  max-height: 200px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scrollbar-color: none;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item ul {
-  margin-top: 0;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item li {
-  list-style-type: none;
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item:hover {
-  transform: translateY(-10px) rotate(1deg);
-  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-}
-.random__wrapper .random__card-wrapper .random__card-items .random__card-item:hover .border {
-  transform: translateY(4px) rotate(-5deg);
-}
-.random__wrapper .random__card-wrapper .random__card-items::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .random__wrapper {
-    margin: 10px 0;
-  }
-  .random__wrapper .random__arrow-block-mob {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob {
-    transform: rotate(180deg);
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob, .random__wrapper .random__arrow-block-mob .arrow-4-mob {
-    margin: 3px 40px;
-    color: #337AB7;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 36px;
-    height: 36px;
-    line-height: 18px;
-    display: inline-block;
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob .arrow-3-icon,
-  .random__wrapper .random__arrow-block-mob .arrow-4-mob .arrow-4-icon {
-    position: relative;
-    top: -1px;
-    transition: transform 0.3s ease;
-    vertical-align: middle;
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob .arrow-3-iconcircle,
-  .random__wrapper .random__arrow-block-mob .arrow-4-mob .arrow-4-iconcircle {
-    transition: stroke-dashoffset 0.3s ease;
-    stroke-dasharray: 95;
-    stroke-dashoffset: 95;
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob:hover .arrow-3-icon,
-  .random__wrapper .random__arrow-block-mob .arrow-4-mob:hover .arrow-4-icon {
-    transform: translate3d(5px, 0, 0);
-  }
-  .random__wrapper .random__arrow-block-mob .arrow-3-mob:hover .arrow-3-iconcircle,
-  .random__wrapper .random__arrow-block-mob .arrow-4-mob:hover .arrow-4-iconcircle {
-    stroke-dashoffset: 0;
-  }
-  .random__wrapper .random__card-wrapper .arrow-3, .random__wrapper .random__card-wrapper .arrow-4 {
-    display: none;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item {
-    flex-direction: column;
-    justify-content: center;
-    width: -moz-max-content;
-    width: max-content;
-    max-height: 480px;
-    padding: 10px 10px;
-    margin: 10px 15px 0;
-    font-size: 14px;
-    line-height: 28px;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item a {
-    margin: 6px auto;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block {
-    height: 195px;
-    font-size: 12px;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__image-block .random__box-time-calories {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 55px;
-    font-size: 15px;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-image {
-    max-width: 110%;
-    max-height: 70%;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-body {
-    overflow: hidden;
-    width: 300px;
-    height: 170px;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .wrapper__card-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .random__wrapper .random__card-wrapper .random__card-items .random__card-item .random__card-ingridients {
-    max-height: 175px;
-    padding-right: 15px;
   }
 }
 .inputs_form {
