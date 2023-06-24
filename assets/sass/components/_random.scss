@@ -1,7 +1,3 @@
-body {
-    //overflow: hidden;
-}
-
 .random__wrapper {
     font-family: $main-font;
     margin: 10px 5% 20px;
@@ -20,21 +16,26 @@ body {
             @include arrow-transform;
         }
 
-        .arrow-3, .arrow-4 {
-            @include arrow;
+        .arrow-3,
+        .arrow-4 {
+            @include arrow(0);
         }
+
         .arrow-3 .arrow-3-icon,
         .arrow-4 .arrow-4-icon {
             @include arrow-icon;
         }
-        .arrow-3 .arrow-3-iconcircle, 
+
+        .arrow-3 .arrow-3-iconcircle,
         .arrow-4 .arrow-4-iconcircle {
             @include arrow-iconcircle;
         }
-        .arrow-3:hover .arrow-3-icon, 
+
+        .arrow-3:hover .arrow-3-icon,
         .arrow-4:hover .arrow-4-icon {
-            @include arrow-hover__arrow-icon ;
+            @include arrow-hover__arrow-icon;
         }
+
         .arrow-3:hover .arrow-3-iconcircle,
         .arrow-4:hover .arrow-4-iconcircle {
             @include arrow-hover__arrow-iconcircle;
@@ -52,6 +53,7 @@ body {
             ::-webkit-scrollbar {
                 display: none;
             }
+
             ::-webkit-scrollbar:hover {
                 display: block;
             }
@@ -77,6 +79,28 @@ body {
                 border-top-right-radius: 23px 130px;
                 border-bottom-left-radius: 110px 19px;
                 border-bottom-right-radius: 120px 24px;
+
+                #loader {
+                    width: 40px;
+                    height: 40px;
+                    border: 4px solid #f3f3f3;
+                    border-top: 4px solid #3498db;
+                    border-radius: 50%;
+                    animation: spin 2s linear infinite;
+                    display: none;
+                    margin-bottom: 20%;
+                    margin-left: 10%;
+                }
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
 
                 a {
                     margin: 10px auto;
@@ -199,6 +223,7 @@ body {
                 transform: translateY(4px) rotate(-5deg);
             }
         }
+
         .random__card-items::-webkit-scrollbar {
             width: 0;
             height: 0;
@@ -217,7 +242,7 @@ body {
 
     .random__wrapper {
         margin: 10px 0;
-    
+
         .random__arrow-block-mob {
             display: flex;
             flex-direction: row;
@@ -227,36 +252,42 @@ body {
             .arrow-3-icon {
                 @include arrow-transform;
             }
-    
-            .arrow-3-mob, .arrow-4-mob {
+
+            .arrow-3-mob,
+            .arrow-4-mob {
                 @include arrow(3px 40px);
             }
+
             .arrow-3-mob .arrow-3-icon,
             .arrow-4-mob .arrow-4-icon {
                 @include arrow-icon
             }
+
             .arrow-3-mob .arrow-3-iconcircle,
             .arrow-4-mob .arrow-4-iconcircle {
                 @include arrow-iconcircle;
             }
+
             .arrow-3-mob:hover .arrow-3-icon,
             .arrow-4-mob:hover .arrow-4-icon {
                 @include arrow-hover__arrow-icon;
             }
-            .arrow-3-mob:hover .arrow-3-iconcircle, 
+
+            .arrow-3-mob:hover .arrow-3-iconcircle,
             .arrow-4-mob:hover .arrow-4-iconcircle {
                 @include arrow-hover__arrow-iconcircle
             }
         }
-    
+
         .random__card-wrapper {
-    
-            .arrow-3, .arrow-4 {
+
+            .arrow-3,
+            .arrow-4 {
                 display: none;
             }
-    
+
             .random__card-items {
-    
+
                 .random__card-item {
                     flex-direction: column;
                     justify-content: center;
@@ -265,23 +296,23 @@ body {
                     padding: 10px 10px;
                     margin: 10px 15px 0;
                     font-size: 14px;
-                    line-height: 28px;   
-    
+                    line-height: 28px;
+
                     a {
                         margin: 6px auto;
                     }
-    
+
                     .random__image-block {
                         height: 195px;
                         font-size: 12px;
-    
+
                         .random__box-time-calories {
                             flex-direction: row;
                             align-items: center;
                             justify-content: space-between;
                         }
                     }
-    
+
                     h3 {
                         display: flex;
                         justify-content: center;
@@ -289,24 +320,24 @@ body {
                         min-height: 55px;
                         font-size: 15px;
                     }
-    
+
                     .random__card-image {
                         max-width: 110%;
                         max-height: 70%;
                     }
-    
+
                     .random__card-body {
                         overflow: hidden;
                         width: 300px;
                         height: 170px;
                     }
-    
+
                     .wrapper__card-item {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                     }
-    
+
                     .random__card-ingridients {
                         max-height: 175px;
                         padding-right: 15px;
@@ -316,4 +347,3 @@ body {
         }
     }
 }
-
