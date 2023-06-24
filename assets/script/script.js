@@ -48,7 +48,7 @@ function redactTotalTime(el) {
 
 // генерируем html верстку random_block
 function createRandomCard(el, stringIngredient) {
-  wrapperRandomCards.innerHTML = '';
+  /* wrapperRandomCards.innerHTML = ''; */
   const cardRandomRes = document.createElement('div');
     cardRandomRes.classList.add('random__card-item');
 
