@@ -7,14 +7,14 @@
   }
 
   .search-form__wrapper {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 1%;
   }
 
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     background-color: #bbc6d696;
     border-color: #bbc6d696;
     border-radius: 5px;
@@ -24,9 +24,8 @@
   .search-form__wrapper-button {
     font-family: $second-font;
     width: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 2vw;
+    padding-bottom: 1%;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
@@ -71,8 +70,6 @@
 
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     background-color: #bbc6d696;
     border-color: #bbc6d696;
     border-radius: 5px;
@@ -80,10 +77,11 @@
   }
 
   .search-form__wrapper-button {
-    width: 20%;
+    font-family: $second-font;
+    width: fit-content;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 2vw;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
@@ -92,6 +90,7 @@
   }
 
   .search-form__title {
+    font-family: $second-font;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
@@ -100,6 +99,7 @@
   }
 
   .search-form__input {
+    font-family: $second-font;
     display: grid;
     grid-template-columns: 15% 35% 15% 35%;
     padding: 1% 10% 1% 10%;
@@ -135,7 +135,7 @@
   }
 
   .search-form__wrapper-button {
-    width: 20%;
+    width: fit-content;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;

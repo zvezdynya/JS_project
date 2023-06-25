@@ -829,13 +829,13 @@ template {
     justify-content: center;
   }
   .search-form__wrapper {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 1%;
   }
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     background-color: rgba(187, 198, 214, 0.5882352941);
     border-color: rgba(187, 198, 214, 0.5882352941);
     border-radius: 5px;
@@ -844,9 +844,8 @@ template {
   .search-form__wrapper-button {
     font-family: "Diphylleia", serif;
     width: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 2vw;
+    padding-bottom: 1%;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
@@ -885,18 +884,18 @@ template {
   }
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     background-color: rgba(187, 198, 214, 0.5882352941);
     border-color: rgba(187, 198, 214, 0.5882352941);
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px rgba(188, 198, 214, 0.5882352941);
   }
   .search-form__wrapper-button {
-    width: 20%;
+    font-family: "Diphylleia", serif;
+    width: -moz-fit-content;
+    width: fit-content;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 2vw;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
@@ -904,6 +903,7 @@ template {
     border-color: #5682c3;
   }
   .search-form__title {
+    font-family: "Diphylleia", serif;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
@@ -911,6 +911,7 @@ template {
     text-align: center;
   }
   .search-form__input {
+    font-family: "Diphylleia", serif;
     display: grid;
     grid-template-columns: 15% 35% 15% 35%;
     padding: 1% 10% 1% 10%;
@@ -941,7 +942,8 @@ template {
     box-shadow: 0px 0px 1px 1px rgba(188, 198, 214, 0.5882352941);
   }
   .search-form__wrapper-button {
-    width: 20%;
+    width: -moz-fit-content;
+    width: fit-content;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
@@ -982,12 +984,8 @@ template {
 .main, .main-item {
   display: flex;
   flex-direction: column;
-  max-width: 98%;
-  height: auto;
-}
-
-.main {
-  margin: 2rem;
+  /*     max-width: 98%; */
+  /*     height: auto; */
 }
 
 .main-item {
@@ -1000,8 +998,8 @@ template {
   .main, .main-item {
     display: flex;
     flex-direction: column;
-    max-width: 98%;
-    height: auto;
+    /*         max-width: 98%;
+            height: auto; */
   }
   .main {
     margin: 0.5rem;
@@ -1016,8 +1014,8 @@ template {
   .main, .main-item {
     display: flex;
     flex-direction: column;
-    max-width: 98%;
-    height: auto;
+    /*         max-width: 98%;
+            height: auto; */
   }
   .main {
     margin: 0rem;
@@ -1032,8 +1030,8 @@ template {
   .main, .main-item {
     display: flex;
     flex-direction: column;
-    max-width: 98%;
-    height: auto;
+    /*         max-width: 98%;
+            height: auto; */
   }
   .main {
     margin: 5rem;
