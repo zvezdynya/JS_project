@@ -1049,7 +1049,7 @@ h2 {
   }
 }
 .jokeandblock {
-  font-family: "Dancing Script", serif;
+  font-family: "Diphylleia", serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1062,7 +1062,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
   padding: 1rem;
   cursor: pointer;
@@ -1089,7 +1089,7 @@ h2 {
 
 .block {
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -1104,15 +1104,26 @@ h2 {
 
 .block__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   max-width: 100%;
   height: auto;
 }
 
+.block__text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  max-width: 100%;
+  height: auto;
+}
+
 .block__picture {
-  max-width: 70%;
+  max-width: 50%;
   margin: 0rem;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1120,6 +1131,7 @@ h2 {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .jokeandblock {
+    font-family: "Diphylleia", serif;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1177,9 +1189,21 @@ h2 {
     height: auto;
     padding: 0rem;
     overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+  .block__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
   }
   .block__picture {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0rem;
     -o-object-fit: contain;
        object-fit: contain;
@@ -1187,7 +1211,7 @@ h2 {
 }
 @media screen and (min-width: 250px) and (max-width: 767px) {
   .jokeandblock {
-    font-family: "Dancing Script", serif;
+    font-family: "Diphylleia", serif;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1245,8 +1269,18 @@ h2 {
     padding: 0rem;
     overflow: hidden;
   }
+  .block__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+  }
   .block__picture {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0rem;
     -o-object-fit: contain;
        object-fit: contain;
@@ -1254,7 +1288,7 @@ h2 {
 }
 @media screen and (min-width: 2500px) and (max-width: 5000px) {
   .jokeandblock {
-    font-family: "Dancing Script", serif;
+    font-family: "Diphylleia", serif;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1311,6 +1345,16 @@ h2 {
     height: auto;
     padding: 3rem;
     overflow: hidden;
+  }
+  .block__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
   }
   .block__picture {
     max-width: 99%;
