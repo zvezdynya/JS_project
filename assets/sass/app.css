@@ -821,6 +821,10 @@ template {
     padding-right: 15px;
   }
 }
+h2 {
+  text-align: center;
+}
+
 @media screen and (min-width: 769px) {
   .search-form {
     display: flex;
