@@ -927,7 +927,7 @@ h2 {
     margin-bottom: 7px;
   }
 }
-@media screen and (max-width: 535px) {
+@media screen and (max-width: 540px) {
   .search-form {
     display: flex;
     margin: 0% 10% 0% 10%;
