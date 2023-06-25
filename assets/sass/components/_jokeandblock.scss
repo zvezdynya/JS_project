@@ -3,9 +3,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 100%;
     height: auto;
+    justify-content: flex-start;    
+    margin-left: 8% !important;
 }
 
 .joke {
@@ -68,9 +69,6 @@
     object-fit: contain;
 }
 
-
-// Adative - Tablet 768-991
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .jokeandblock {
         font-family: $second-font;
@@ -81,13 +79,15 @@
         row-gap: 2rem;
         max-width: 100%;
         height: auto;
+        justify-content: flex-start;    
+        margin: 2% 10%;
     }
     
     .joke {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 30%;
+        max-width: 20%;
         height: auto;
         padding: 1rem;
         cursor: pointer;
@@ -127,7 +127,6 @@
         height: auto;
         padding: 0rem;
         overflow: hidden;
-        // justify-content: center;
         width: 100%;
         height: auto;
     }
@@ -150,9 +149,6 @@
     }
 }
 
-
-// Adative - Mobile 250-767
-
 @media screen and (min-width: 250px) and (max-width: 767px) {
     .jokeandblock {
     font-family: $second-font;
@@ -168,7 +164,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 30%;
+        max-width: 20%;
         height: auto;
         padding: 1rem;
         cursor: pointer;
@@ -220,7 +216,7 @@
         max-width: 100%;
         height: auto;
     }
-   
+
     .block__picture {
         max-width: 50%;
         margin: 0rem;
@@ -228,17 +224,16 @@
     }
 }
 
-// Adative - HD 2500-5000
-
 @media screen and (min-width: 2500px) and (max-width: 5000px) {
     .jokeandblock {
         font-family: $second-font;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         max-width: 100%;
         height: auto;
+        margin-left: 8%;
     }
     
     .joke {

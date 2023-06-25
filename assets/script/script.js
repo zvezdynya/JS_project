@@ -225,7 +225,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault(); // Предотвратить отправку данных формы
 });
 
-const fruitList = [
+/* const fruitList = [
   {
       name: 'orange',
       energy: '197 kJ (47 kcal)',
@@ -266,8 +266,8 @@ const fruitList = [
       vitamin3: 'Vitamin C 44% DV, 36.4 mg',
       url: 'https://media.gettyimages.com/id/168370138/photo/mango.jpg?s=612x612&w=0&k=20&c=ENq2BrUV8dNH2rth_ZYBBtS9RWDwCbI25SfulxirmnQ='
   },
-];
-
+]; */
+/* 
 const blockfruit = document.getElementById('block__fruit');
 const blocksalad = document.getElementById('block__salad');
 let fruitSaladStr = blocksalad.textContent;
@@ -297,7 +297,7 @@ let fruitListStr = "";
     fruitSaladRecipe = `<p>Make a fruit salad of ${fruitSaladRecipe} drizzle the honey lime dressing on top of it.</p>`
     blocksalad.innerHTML = fruitSaladRecipe;
   });
-});
+}); */
 
 //переменные для попапа
 const jokePopup = document.getElementById('popup');

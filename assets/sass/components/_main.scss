@@ -1,8 +1,6 @@
 .main, .main-item {
     display: flex;
     flex-direction: column;
-/*     max-width: 98%; */
-/*     height: auto; */
 }
 
 .main-item {
@@ -15,9 +13,7 @@
     .main, .main-item {
         display: flex;
         flex-direction: column;
-/*         max-width: 98%;
-        height: auto; */
-    }
+}
 
     .main {
         margin: 0.5rem;
@@ -34,9 +30,7 @@
     .main, .main-item {
         display: flex;
         flex-direction: column;
-/*         max-width: 98%;
-        height: auto; */
-    }
+}
 
     .main {
         margin: 0rem;
