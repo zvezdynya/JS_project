@@ -11,7 +11,7 @@ You may check the website following the link <br/>
 https://github.com/zvezdynya/JS_project <br/>
 
 ## Technologies used: <br/>
-HTML, CSS, SASS, Bootstrap 5.0 framework, BEM, JavaScript <br/>
+HTML, CSS, SASS, BEM, JavaScript <br/>
 
 ## Developer team: <br/>
 Yana Germatskaya (Team Lead) https://github.com/yanakin394, <br/>
