@@ -310,7 +310,7 @@ function popupFunc () {
     jokeBtn.addEventListener('click', event => {        
         event.preventDefault();
         jokeApiReq ();
-        divBody.style.overflow = 'hidden';
+        divBody.style.overflow = 'hidden';    //убираем 2й скролл
         jokePopup.classList.add('open');
         
     })
