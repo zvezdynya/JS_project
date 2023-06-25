@@ -488,7 +488,7 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 @media screen and (max-width: 1400px) {
