@@ -1,8 +1,9 @@
 .jokeandblock {
+    font-family: $main-font;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 100%;
     height: auto;
 }
@@ -26,7 +27,6 @@
 }
 
 .joke-text {
-    font-family: $second-font;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,5 +39,220 @@
 }
 
 .block {
-    @include block(column,50%,$color-basic);
+    @include block(column,50%,$color-neutral);
+}
+
+.block__item {    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.block__picture {
+    max-width: 70%;
+    margin: 0rem;
+    object-fit: contain;
+}
+
+
+// Adative - Tablet 768-991
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .jokeandblock {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 2rem;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30%;
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 0.3rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 0rem;
+        overflow: hidden;
+    }
+
+    .block__picture {
+        max-width: 70%;
+        margin: 0rem;
+        object-fit: contain;
+    }
+}
+
+
+// Adative - Mobile 250-767
+
+@media screen and (min-width: 250px) and (max-width: 767px) {
+    .jokeandblock {
+    font-family: $main-font;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30%;
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 0.3rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 0rem;
+        overflow: hidden;
+    }
+
+    .block__picture {
+        max-width: 70%;
+        margin: 0rem;
+        object-fit: contain;
+    }
+}
+
+// Adative - HD 2500-5000
+
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
+    .jokeandblock {
+        font-family: $main-font;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30%;
+        height: auto;
+        padding: 3rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 1rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 3rem;
+        overflow: hidden;
+    }
+
+    .block__picture {
+        max-width: 99%;
+        margin: 0rem;
+        object-fit: contain;
+    }
 }
