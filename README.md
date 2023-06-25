@@ -22,5 +22,8 @@ Olga      https://github.com/olkosti. <br/>
 Anna Saurina https://github.com/AnnaSaurina <br/>
 Veronica Obidina https://github.com/vnksobol <br/>
 
-## Developer team: <br/>
+
 Some of the parts are still to be worked on
+- loaders
+- search by filters
+- random cards position on smaller resolution
