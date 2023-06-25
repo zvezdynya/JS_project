@@ -1,5 +1,5 @@
 .jokeandblock {
-    font-family: $main-font;
+    font-family: $second-font;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     padding: 1rem;
     cursor: pointer;
@@ -39,20 +39,31 @@
 }
 
 .block {
-    @include block(column,50%,$color-neutral);
+    @include block(column,60%,$color-neutral);
 }
 
 .block__item {    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     max-width: 100%;
     height: auto;
 }
 
+.block__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+}
+
 .block__picture {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0rem;
     object-fit: contain;
 }
@@ -62,6 +73,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .jokeandblock {
+        font-family: $second-font;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -115,10 +127,24 @@
         height: auto;
         padding: 0rem;
         overflow: hidden;
+        // justify-content: center;
+        width: 100%;
+        height: auto;
     }
 
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+    }
+    
     .block__picture {
-        max-width: 70%;
+        max-width: 50%;
         margin: 0rem;
         object-fit: contain;
     }
@@ -129,7 +155,7 @@
 
 @media screen and (min-width: 250px) and (max-width: 767px) {
     .jokeandblock {
-    font-family: $main-font;
+    font-family: $second-font;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -184,8 +210,19 @@
         overflow: hidden;
     }
 
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+    }
+   
     .block__picture {
-        max-width: 70%;
+        max-width: 50%;
         margin: 0rem;
         object-fit: contain;
     }
@@ -195,7 +232,7 @@
 
 @media screen and (min-width: 2500px) and (max-width: 5000px) {
     .jokeandblock {
-        font-family: $main-font;
+        font-family: $second-font;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -231,7 +268,6 @@
         font-weight: 800;
         font-size: 1.5rem;
         color: $color-neutral;
-    
     }
     
     .block {
@@ -250,6 +286,17 @@
         overflow: hidden;
     }
 
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        max-width: 100%;
+        height: auto;
+    }
+    
     .block__picture {
         max-width: 99%;
         margin: 0rem;
