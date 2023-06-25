@@ -304,16 +304,19 @@ const jokePopup = document.getElementById('popup');
 const jokeBtn = document.getElementById('joke');
 const popupClose = document.querySelector('.popup__close');
 const jokeText = document.querySelector('.popup__text');
+const divBody = document.getElementById('body');
 //функция для появления и закрытия попапа
 function popupFunc () {
     jokeBtn.addEventListener('click', event => {        
         event.preventDefault();
         jokeApiReq ();
+        divBody.style.overflow = 'hidden';
         jokePopup.classList.add('open');
         
     })
     popupClose.addEventListener('click', event => {
         event.preventDefault();
+        divBody.style.overflow = '';
         jokePopup.classList.remove('open');
     })
 }
