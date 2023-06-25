@@ -997,7 +997,7 @@ template {
 .main, .main-item {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 98%;
   height: auto;
 }
 
@@ -1007,13 +1007,64 @@ template {
 
 .main-item {
   padding: 2rem 1rem 2rem;
+  display: flex;
+  align-self: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main, .main-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 98%;
+    height: auto;
+  }
+  .main {
+    margin: 0.5rem;
+  }
+  .main-item {
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 767px) {
+  .main, .main-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 98%;
+    height: auto;
+  }
+  .main {
+    margin: 0rem;
+  }
+  .main-item {
+    padding: 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
+  .main, .main-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 98%;
+    height: auto;
+  }
+  .main {
+    margin: 5rem;
+  }
+  .main-item {
+    padding: 3rem 3rem 3rem;
+    display: flex;
+    align-self: center;
+  }
+}
 .jokeandblock {
+  font-family: "Dancing Script", serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 100%;
   height: auto;
 }
@@ -1037,7 +1088,6 @@ template {
 }
 
 .joke-text {
-  font-family: "Diphylleia", serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1051,15 +1101,35 @@ template {
 .block {
   flex-direction: column;
   width: 50%;
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(255, 255, 255);
   display: flex;
+  align-items: center;
   height: auto;
-  padding: 2rem;
+  min-width: 20vw;
+  max-width: 90vw;
+  padding: 0rem 1rem;
+  margin: 0rem;
   box-shadow: 0px 2px 2px rgb(140, 140, 140);
   border-radius: 15px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+.block__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.block__picture {
+  max-width: 70%;
+  margin: 0rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .jokeandblock {
     display: flex;
     flex-direction: column;
@@ -1088,6 +1158,140 @@ template {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.5rem;
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+  .block {
+    flex-direction: column;
+    width: 97%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-width: 20vw;
+    max-width: 90vw;
+    padding: 0rem 1rem;
+    margin: 0rem;
+    box-shadow: 0px 2px 2px rgb(140, 140, 140);
+    border-radius: 15px;
+    padding: 0.3rem;
+  }
+  .block__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 96%;
+    height: auto;
+    padding: 0rem;
+    overflow: hidden;
+  }
+  .block__picture {
+    max-width: 70%;
+    margin: 0rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 767px) {
+  .jokeandblock {
+    font-family: "Dancing Script", serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    height: auto;
+  }
+  .joke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    height: auto;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .joke:hover {
+    transform: translate(0, 0.25rem);
+  }
+  .joke:active {
+    transform: translate(0em, 0.75rem);
+  }
+  .joke-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+  .block {
+    flex-direction: column;
+    width: 97%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-width: 20vw;
+    max-width: 90vw;
+    padding: 0rem 1rem;
+    margin: 0rem;
+    box-shadow: 0px 2px 2px rgb(140, 140, 140);
+    border-radius: 15px;
+    padding: 0.3rem;
+  }
+  .block__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 96%;
+    height: auto;
+    padding: 0rem;
+    overflow: hidden;
+  }
+  .block__picture {
+    max-width: 70%;
+    margin: 0rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
+  .jokeandblock {
+    font-family: "Dancing Script", serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 100%;
+    height: auto;
+  }
+  .joke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    height: auto;
+    padding: 3rem;
+    cursor: pointer;
+  }
+  .joke:hover {
+    transform: translate(0, 0.25rem);
+  }
+  .joke:active {
+    transform: translate(0em, 0.75rem);
+  }
+  .joke-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
     position: absolute;
     font-weight: 800;
@@ -1096,19 +1300,41 @@ template {
   }
   .block {
     flex-direction: column;
-    width: 50%;
-    background-color: rgb(215, 215, 215);
+    width: 97%;
+    background-color: rgb(255, 255, 255);
     display: flex;
+    align-items: center;
     height: auto;
-    padding: 2rem;
+    min-width: 20vw;
+    max-width: 90vw;
+    padding: 0rem 1rem;
+    margin: 0rem;
     box-shadow: 0px 2px 2px rgb(140, 140, 140);
     border-radius: 15px;
+    padding: 1rem;
+  }
+  .block__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    max-width: 96%;
+    height: auto;
+    padding: 3rem;
+    overflow: hidden;
+  }
+  .block__picture {
+    max-width: 99%;
+    margin: 0rem;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 .footer, .footer__img {
   display: flex;
   align-self: center;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=app.css.map */

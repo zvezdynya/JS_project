@@ -1,7 +1,7 @@
 .main, .main-item {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 98%;
     height: auto;
 }
 
@@ -11,4 +11,72 @@
 
 .main-item {
     padding: 2rem 1rem 2rem;
+    display: flex;
+    align-self: center;
+}
+
+
+// Adative - Tablet 768-991
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .main, .main-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 98%;
+        height: auto;
+    }
+
+    .main {
+        margin: 0.5rem;
+    }
+
+    .main-item {
+        padding: 1rem 1rem 1rem;
+        display: flex;
+        align-self: center;
+    }
+}
+
+
+// Adative - Mobile 250-767
+
+@media screen and (min-width: 250px) and (max-width: 767px) {
+    .main, .main-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 98%;
+        height: auto;
+    }
+
+    .main {
+        margin: 0rem;
+    }
+
+    .main-item {
+        padding: 0.5rem 0.5rem 0.5rem;
+        display: flex;
+        align-self: center;
+    }
+}
+
+
+// Adative - HD 2500-5000
+
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
+    .main, .main-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 98%;
+        height: auto;
+        }
+
+    .main {
+        margin: 5rem;
+    }
+
+    .main-item {
+        padding: 3rem 3rem 3rem;
+        display: flex;
+        align-self: center;
+    }
 }

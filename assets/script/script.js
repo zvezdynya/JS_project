@@ -224,3 +224,77 @@ searchButton.addEventListener("click", (e) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Предотвратить отправку данных формы
 });
+
+const fruitList = [
+  {
+      name: 'orange',
+      energy: '197 kJ (47 kcal)',
+      vitamin1: 'Thiamine (B1)	8% DV, 0.087 mg',
+      vitamin2: 'Riboflavin (B2)	3% DV, 0.04 mg',
+      vitamin3: 'Vitamin C	64% DV, 53.2 mg',
+      url: 'https://media.gettyimages.com/id/182463420/photo/tangerine-duo-with-leafs.jpg?s=612x612&w=0&k=20&c=d3JZRAqgqZ5RWyN4ryFteCnmFNbeD9e3TNJkS2IC0vU='
+  }, 
+  {
+      name: 'pomegranate',
+      energy: '346 kJ (83 kcal)',
+      vitamin1: 'Folate (B9)	10% DV, 38 mg',
+      vitamin2: 'Vitamin C	12% DV, 10.2 mg',
+      vitamin3: 'Vitamin K	16% DV, 16.4 mg',
+      url: 'https://media.gettyimages.com/id/185218827/photo/piece-of-pomegranate.jpg?s=612x612&w=0&k=20&c=9Q2YmTPHKOOE1sbDxl3SBegKtmzanSAlZEXtXNmn0As='
+  },
+  {
+      name: 'banana',
+      energy: '371 kJ (89 kcal)',
+      vitamin1: 'Pantothenic acid (B5)	7% DV, 0.334 mg',
+      vitamin2: 'Vitamin B6 31% DV, 0.4 mg',
+      vitamin3: 'Vitamin C	10% DV, 8.7 mg',
+      url: 'https://media.gettyimages.com/id/173242750/photo/banana-bunch.jpg?s=612x612&w=0&k=20&c=MAc8AXVz5KxwWeEmh75WwH6j_HouRczBFAhulLAtRUU='
+  },
+  {
+      name: 'blueberry',
+      energy: '240 kJ (57 kcal)',
+      vitamin1: 'Vitamin C	12% DV, 9.7 mg',
+      vitamin2: 'Vitamin E	4% DV, 0.57 mg',
+      vitamin3: 'Vitamin K 18% DV, 19.3 mg',
+      url: 'https://media.gettyimages.com/id/1071798454/photo/fresh-juicy-blueberries.jpg?s=612x612&w=0&k=20&c=-YbrKFpmRCc5v6euTg5LwI0mOfa2JZpiMMVwPG8L-Zo='
+  },
+  {
+      name: 'mango',
+      energy: '250 kJ (60 kcal)',
+      vitamin1: 'Vitamin B6	9% DV, 0.119 mg',
+      vitamin2: 'Folate (B9)	11% DV, 43 mg',
+      vitamin3: 'Vitamin C 44% DV, 36.4 mg',
+      url: 'https://media.gettyimages.com/id/168370138/photo/mango.jpg?s=612x612&w=0&k=20&c=ENq2BrUV8dNH2rth_ZYBBtS9RWDwCbI25SfulxirmnQ='
+  },
+];
+
+const blockfruit = document.getElementById('block__fruit');
+const blocksalad = document.getElementById('block__salad');
+let fruitSaladStr = blocksalad.textContent;
+
+window.addEventListener("load", (event) => { 
+  let randomFruit = fruitList[Math.floor(Math.random() * fruitList.length)];
+  function makeCapitalLetters (capital) {
+    return `${capital.toUpperCase()}`;
+}
+const capital = makeCapitalLetters(randomFruit.name);
+let fruitListStr = "";
+  fruitListStr = `
+    <h2>Excellent dessert</h2> 
+    <img src="${randomFruit.url}" class = "block__picture" alt="Fruit">
+    <h3>${capital}</h3>
+    <p>${randomFruit.energy}</p>
+    <ul>
+      <li>${randomFruit.vitamin1}</li>
+      <li>${randomFruit.vitamin2}</li>
+      <li>${randomFruit.vitamin3}</li>
+    </ul>
+  `;  
+  blockfruit.innerHTML = fruitListStr;
+  fruitList.forEach(function(fruitSalad) {
+    fruitSaladStr = fruitSaladStr + fruitSalad.name + ", ";
+    let fruitSaladRecipe = fruitSaladStr;
+    fruitSaladRecipe = `<p>Make a fruit salad of ${fruitSaladRecipe} drizzle the honey lime dressing on top of it.</p>`
+    blocksalad.innerHTML = fruitSaladRecipe;
+  });
+});
