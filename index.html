@@ -18,94 +18,98 @@
       <!-- Шахноз начало-->
       <header class="header">
         <div class="header__img-blok">
-          <div class="header__title">Be the chef of your <br />kitchen!</div>
+          <h1 class="header__title">Be the chef of your <br />kitchen!</h1>
         </div>
       </header>
       <!-- Шахноз конец-->
       <main class="main">
         <!-- Анна инпуты начало-->
-        <form method="get" class="inputs_form">
-          <div class="search_area">
+        <form method="get" class="search-form">
+          <div class="search-form__wrapper">
             <input
-              class="search_input"
               name="search"
-              placeholder="What do you want to cook?"
               type="search"
+              class="search-form__wrapper-area"
             />
-            <button class="search_parameters" type="submit">Search</button>
+            <button type="submit" class="search-form__wrapper-button">
+              Search
+            </button>
           </div>
-          <div class="inputs__wrapper">
-            Specify additional parameters for the search:
-          </div>
-          <label class="grid">
+          <div class="search-form__title">Popular search categories:</div>
+          <label for="parameters" class="search-form__input">
             <input
               type="checkbox"
               name="parameters"
               value="gluten_free"
-              class="input_elements"
+              class="search-form__input-elements"
               id="gluten_free"
             />Gluten free
             <input
               type="checkbox"
               name="parameters"
               value="keto"
-              class="input_elements"
+              class="search-form__input-elements"
               id="keto"
             />Keto
             <input
               type="checkbox"
               name="parameters"
               value="no_oil"
-              class="input_elements"
+              class="search-form__input-elements"
               id="no_oil"
             />No oil
             <input
               type="checkbox"
               name="parameters"
               value="seafood"
-              class="input_elements"
+              class="search-form__input-elements"
               id="seafood"
             />Seafood
             <input
               type="checkbox"
               name="parameters"
               value="soy_free"
-              class="input_elements"
+              class="search-form__input-elements"
               id="soy_free"
             />Soy free
             <input
               type="checkbox"
               name="parameters"
               value="sugar_free"
-              class="input_elements"
+              class="search-form__input-elements"
               id="sugar_free"
             />Sugar free
             <input
               type="checkbox"
               name="parameters"
               value="vegan"
-              class="input_elements"
+              class="search-form__input-elements"
               id="vegan"
             />Vegan
             <input
               type="checkbox"
               name="parameters"
               value="vegetarian"
-              class="input_elements"
+              class="search-form__input-elements"
               id="vegetarian"
             />Vegetarian
           </label>
         </form>
+
         <!-- Анна инпуты конец-->
         <!-- Рандом начало -->
         <div class="random__wrapper">
+          <h2>A selection of random recipes</h2>
           <div class="random__card-wrapper">
-            <div class="arrow-3 random__arrow">
+            <div
+              class="arrow-3 random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'left',50,600,40)"
+            >
               <svg
                 class="arrow-3-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
+                width="40"
+                height="40"
                 viewBox="0 0 32 32"
               >
                 <g
@@ -128,39 +132,80 @@
                 </g>
               </svg>
             </div>
-            <div class="random__card-items">
-              <!-- <div class="random__card-item">
-                            <span class="border tl"></span>
-                            <span class="border tr"></span>
-                            <span class="border bl"></span>
-                            <span class="border br"></span>
-                            <h3 class="random__card-title">Щербет</h3>
-                            <div class="wrapper__card-item">
-                                <img src="https://img1.russianfood.com/dycontent/images_upl/508/big_507369.jpg"
-                                    alt="food_photo" class="random__card-image">
-                                <div class="random__card-body">
-
-                                    <div class="random__card-ingridients">
-                                        <ul>
-                                            <li>Сахар - 300 г</li>
-                                            <li>Арахис - 250 г</li>
-                                            <li>Сгущённое молоко - 200 г</li>
-                                            <li>Сливки жирностью 30 % - 200 мл</li>
-                                            <li> Масло сливочное 82 % - 100 г</li>
-                                            <li>Соль - 1 ч. ложка без горки</li>
-                                            <li>Масло растительное - для смазывания формы</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-            </div>
-            <div class="arrow-4 random__arrow">
+            <div class="random__card-items"></div>
+            <div
+              class="arrow-4 random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'right',50,600,40)"
+            >
               <svg
                 class="arrow-4-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
+                width="40"
+                height="40"
+                viewBox="0 0 32 32"
+              >
+                <g
+                  fill="none"
+                  stroke="#337AB7"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                >
+                  <circle
+                    class="arrow-4-iconcircle"
+                    cx="16"
+                    cy="16"
+                    r="15.12"
+                  ></circle>
+                  <path
+                    class="arrow-4-icon--arrow"
+                    d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="random__arrow-block-mob">
+            <div
+              class="arrow-3-mob random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'left',50,250,40)"
+            >
+              <svg
+                class="arrow-3-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 32 32"
+              >
+                <g
+                  fill="none"
+                  stroke="#337AB7"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                >
+                  <circle
+                    class="arrow-3-iconcircle"
+                    cx="16"
+                    cy="16"
+                    r="15.12"
+                  ></circle>
+                  <path
+                    class="arrow-3-icon--arrow"
+                    d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div
+              class="arrow-4-mob random__arrow"
+              onclick="sideScroll(wrapperRandomCards,'right',50,250,40)"
+            >
+              <svg
+                class="arrow-4-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
                 viewBox="0 0 32 32"
               >
                 <g
@@ -189,8 +234,68 @@
         <div class="cards">
           <div class="cards__swiper">
             <div class="cards__slider">
-              <div class="cards__container">
-                <div id="loader"></div>
+              <div
+                class="arrow-3-card random__arrow"
+                onclick="sideScroll(cardsInner,'left',10,400,20)"
+              >
+                <svg
+                  class="arrow-3-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                >
+                  <g
+                    fill="none"
+                    stroke="#337AB7"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                  >
+                    <circle
+                      class="arrow-3-iconcircle"
+                      cx="16"
+                      cy="16"
+                      r="15.12"
+                    ></circle>
+                    <path
+                      class="arrow-3-icon--arrow"
+                      d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="cards__container"></div>
+              <div
+                class="arrow-4-card random__arrow"
+                onclick="sideScroll(cardsInner,'right',10,400,20)"
+              >
+                <svg
+                  class="arrow-4-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                >
+                  <g
+                    fill="none"
+                    stroke="#337AB7"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                  >
+                    <circle
+                      class="arrow-4-iconcircle"
+                      cx="16"
+                      cy="16"
+                      r="15.12"
+                    ></circle>
+                    <path
+                      class="arrow-4-icon--arrow"
+                      d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+                    ></path>
+                  </g>
+                </svg>
               </div>
             </div>
           </div>
