@@ -117,7 +117,6 @@ function createRandomCard(el, stringIngredient) {
 //функция создания карточек из поиска
 
 function useApiData(data) {
-  cardsInner.innerHTML = loader;
   if (data.hits.length === 0) {
     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
@@ -182,14 +181,13 @@ async function sendApiRequest(searchParam, errorContainer, event) {
         viewSometh(wrapperRandomBlock);
       });
     }
-
     //console.log(event.type);
   } catch (error) {
     document.querySelector(errorContainer).textContent =
       "Server is not responding";
   }
-  // } finally {
-  //   loader.style.display = "none"; // Скрыть лоадер после загрузки
+  //  finally {
+  //   hiddenSometh(loaderhtml);
   // }
 }
 
@@ -201,18 +199,19 @@ function addCardToHTML(parentContainer, card) {
 // блок основного кода
 
 hiddenSometh(wrapperRandomBlock);
+hiddenSometh(cardsBlock);
 
 // запрос в апи при загрузке страницы
 document.addEventListener("DOMContentLoaded", (e) => {
   wrapperRandomCards.innerHTML = loader;
   console.log(e.type);
   sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
+  viewSometh(cardsBlock);
 });
 
 //событие клик для поиска рецептов
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
-  viewSometh(cardsBlock);
   console.log(e.type);
   const searchRecipe = document.querySelector(".search-form__wrapper-area");
   let searchRecipeValue = searchRecipe.value;
