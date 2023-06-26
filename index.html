@@ -9,21 +9,33 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="icon" href="assets/icons/page_icon.png" />
+    <link rel="icon" href="assets/images/icons/page_icon.png" />
     <title>Yummy!</title>
   </head>
-
-  <body>
+  <body id="body">
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <div class="popup__close">&times;</div>
+          <div class="popup__wrapper">
+            <p class="popup__title">Here's a food joke!</p>
+            <p class="popup__text"></p>
+            <img
+              class="popup__img"
+              src="assets/images/avocado.jpg"
+              alt="food joke"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
-      <!-- Шахноз начало-->
       <header class="header">
         <div class="header__img-blok">
-          <h1 class="header__title">Be the chef of your <br />kitchen!</h1>
+          <h1 class="header__title">Be the chef of your kitchen!</h1>
         </div>
       </header>
-      <!-- Шахноз конец-->
-      <main>
-        <!-- Анна инпуты начало-->
+      <main class="main">
         <form method="get" class="search-form">
           <div class="search-form__wrapper">
             <input
@@ -95,9 +107,6 @@
             />Vegetarian
           </label>
         </form>
-
-        <!-- Анна инпуты конец-->
-        <!-- Рандом начало -->
         <div class="random__wrapper">
           <h2>A selection of random recipes</h2>
           <div class="random__card-wrapper">
@@ -230,7 +239,6 @@
             </div>
           </div>
         </div>
-        <!-- Карточки начало -->
         <div class="cards">
           <div class="cards__swiper">
             <div class="cards__slider">
@@ -300,9 +308,7 @@
             </div>
           </div>
         </div>
-        <!-- Карточки конец -->
-        <!-- Вероника начало-->
-        <section class="main-item jokeandblock">
+        <section class="jokeandblock">
           <div class="joke" id="joke">
             <p class="joke-text">
               Food <br />
@@ -310,7 +316,15 @@
             </p>
             <img src="assets/images/joke.png" alt="joke button" />
           </div>
-          <div class="block" id="wineblock"></div>
+          <!-- <div class="block">
+            <div class="block__item" id="block__pictute">
+              <img src="" class="block__picture"/>   
+            </div>
+            <div class="block__item block__text">
+              <p class="block__text" id="block__fruit"></p>
+              <p class="block__text" id="block__salad"></p>
+            </div>
+          </div> -->
         </section>
       </main>
       <footer class="footer">
@@ -321,7 +335,6 @@
           </svg>
         </a>
       </footer>
-      <!-- Вероника конец-->
       <script src="assets/script/script.js"></script>
     </div>
   </body>

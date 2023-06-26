@@ -5,57 +5,49 @@
     flex-direction: column;
     justify-content: center;
   }
-
   .search-form__wrapper {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 1%;
   }
-
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #bbc6d696;
-    border-color: #bbc6d696;
+    background-color: rgba(187, 198, 214, 0.5882352941);
+    border-color: rgba(187, 198, 214, 0.5882352941);
     border-radius: 5px;
-    box-shadow: 0px 0px 1px 1px #bcc6d696;
+    box-shadow: 0px 0px 1px 1px rgba(188, 198, 214, 0.5882352941);
   }
-
   .search-form__wrapper-button {
-    font-family: $second-font;
+    font-family: "Diphylleia", serif;
     width: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 1.25vw;
+    padding-bottom: 1%;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px #5682c3;
     border-color: #5682c3;
   }
-
   .search-form__title {
-    font-family: $second-font;
+    font-family: "Diphylleia", serif;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
     font-weight: 600;
     text-align: center;
   }
-
   .search-form__input {
-    font-family: $second-font;
+    font-family: "Diphylleia", serif;
     display: grid;
     grid-template-columns: 15% 35% 15% 35%;
     padding: 1% 10% 1% 10%;
     margin-top: 1%;
   }
-
   .search-form__input-elements {
     margin-bottom: 7px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .search-form {
     display: flex;
@@ -63,89 +55,83 @@
     flex-direction: column;
     justify-content: center;
   }
-
   .search-form__wrapper {
     display: block;
     padding: 1%;
   }
-
   .search-form__wrapper-area {
     width: 75%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #bbc6d696;
-    border-color: #bbc6d696;
+    background-color: rgba(187, 198, 214, 0.5882352941);
+    border-color: rgba(187, 198, 214, 0.5882352941);
     border-radius: 5px;
-    box-shadow: 0px 0px 1px 1px #bcc6d696;
+    box-shadow: 0px 0px 1px 1px rgba(188, 198, 214, 0.5882352941);
   }
-
   .search-form__wrapper-button {
-    width: 20%;
+    font-family: "Diphylleia", serif;
+    width: 15%;
+    height: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-size: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.5vw;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px #5682c3;
     border-color: #5682c3;
   }
-
   .search-form__title {
+    font-family: "Diphylleia", serif;
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
     font-weight: 600;
     text-align: center;
   }
-
   .search-form__input {
+    font-family: "Diphylleia", serif;
     display: grid;
     grid-template-columns: 15% 35% 15% 35%;
     padding: 1% 10% 1% 10%;
     margin-top: 1%;
   }
-
   .search-form__input-elements {
     margin-bottom: 7px;
   }
 }
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 535px) {
   .search-form {
     display: flex;
     margin: 0% 10% 0% 10%;
     flex-direction: column;
     justify-content: center;
   }
-
   .search-form__wrapper {
     display: block;
     padding: 1%;
   }
-
   .search-form__wrapper-area {
     width: 70%;
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: #bbc6d696;
-    border-color: #bbc6d696;
+    background-color: rgba(187, 198, 214, 0.5882352941);
+    border-color: rgba(187, 198, 214, 0.5882352941);
     border-radius: 5px;
-    box-shadow: 0px 0px 1px 1px #bcc6d696;
+    box-shadow: 0px 0px 1px 1px rgba(188, 198, 214, 0.5882352941);
   }
-
   .search-form__wrapper-button {
-    width: 20%;
+    width: 15%;
+    height: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 2vw;
     color: white;
     background-color: #5682c3;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px #5682c3;
     border-color: #5682c3;
   }
-
   .search-form__title {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -153,14 +139,12 @@
     font-weight: 600;
     text-align: center;
   }
-
   .search-form__input {
     display: grid;
-    grid-template-columns: 15% 85%;
-    padding: 1%;
+    grid-template-columns: 25% 75%;
+    padding: 1% 20% 1% 20%;
     margin-top: 3%;
   }
-
   .search-form__input-elements {
     margin-bottom: 7px;
   }

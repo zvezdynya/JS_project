@@ -1,7 +1,37 @@
-.footer, .footer__img {
-    display: flex;
-    align-self: center;
+.footer {
+    background-image: url("../images/footer.jpg");
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 250px;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1500px) {
+    .footer {
+    height: 225px !important;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .footer {
+    height: 175px !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer {
+    height: 150px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+    height: 100px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .footer {
+    height: 80px !important;
+    }
 }
