@@ -14,16 +14,20 @@
   </head>
   <body id="body">
     <div id="popup" class="popup">
-        <div class="popup__body">
-            <div class="popup__content">
-                <div class="popup__close">&times;</div>
-                <div class="popup__wrapper">
-                  <p class="popup__title">Here's a food joke!</p>
-                  <p class="popup__text"></p>
-                  <img class="popup__img" src="assets/images/avocado.jpg" alt="food joke">
-                </div>
-            </div>
+      <div class="popup__body">
+        <div class="popup__content">
+          <div class="popup__close">&times;</div>
+          <div class="popup__wrapper">
+            <p class="popup__title">Here's a food joke!</p>
+            <p class="popup__text"></p>
+            <img
+              class="popup__img"
+              src="assets/images/avocado.jpg"
+              alt="food joke"
+            />
+          </div>
         </div>
+      </div>
     </div>
     <div class="wrapper">
       <header class="header">
@@ -239,7 +243,7 @@
           <div class="cards__swiper">
             <div class="cards__slider">
               <div
-                class="arrow-3-card random__arrow"
+                class="arrow-3-card carousel-arrow"
                 onclick="sideScroll(cardsInner,'left',10,400,20)"
               >
                 <svg
@@ -271,7 +275,7 @@
               </div>
               <div class="cards__container"></div>
               <div
-                class="arrow-4-card random__arrow"
+                class="arrow-4-card carousel-arrow"
                 onclick="sideScroll(cardsInner,'right',10,400,20)"
               >
                 <svg
@@ -306,14 +310,11 @@
         </div>
         <section class="jokeandblock">
           <div class="joke" id="joke">
-            <p class=" joke-text">
-              Food <br> 
+            <p class="joke-text">
+              Food <br />
               joke
             </p>
-            <img
-            src="assets/images/joke.png"
-            alt="joke button"
-            />
+            <img src="assets/images/joke.png" alt="joke button" />
           </div>
           <!-- <div class="block">
             <div class="block__item" id="block__pictute">
@@ -327,6 +328,12 @@
         </section>
       </main>
       <footer class="footer">
+        <img class="footer__img" src="assets/images/footer.jpg" alt="footer" />
+        <a class="footer__button-up" href="#">
+          <svg class="footer__icon-up">
+            <use xlink:href="assets/images/icons/sprite.svg#iconUp"></use>
+          </svg>
+        </a>
       </footer>
       <script src="assets/script/script.js"></script>
     </div>

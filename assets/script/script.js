@@ -117,7 +117,6 @@ function createRandomCard(el, stringIngredient) {
 //функция создания карточек из поиска
 
 function useApiData(data) {
-  cardsInner.innerHTML = loader;
   if (data.hits.length === 0) {
     cardsInner.innerHTML = `<p class="cards__text-recipe-not">Recipe not found</p>`;
     return;
@@ -182,14 +181,13 @@ async function sendApiRequest(searchParam, errorContainer, event) {
         viewSometh(wrapperRandomBlock);
       });
     }
-
     //console.log(event.type);
   } catch (error) {
     document.querySelector(errorContainer).textContent =
       "Server is not responding";
   }
-  // } finally {
-  //   loader.style.display = "none"; // Скрыть лоадер после загрузки
+  //  finally {
+  //   hiddenSometh(loaderhtml);
   // }
 }
 

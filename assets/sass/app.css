@@ -468,6 +468,27 @@ template {
   }
 }
 
+.footer .footer__button-up {
+  position: fixed;
+  bottom: 28px;
+  right: 2%;
+  z-index: 9;
+}
+.footer .footer__icon-up {
+  fill: rgb(60, 100, 200);
+  height: 80px;
+  width: 80px;
+}
+.footer .footer__button-up:hover > .footer__icon-up {
+  fill: #5682C3;
+}
+@media screen and (max-width: 600px) {
+  .footer .footer__icon-up {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 .header .header__img-blok {
   background-image: url("../images/banner.jpg");
   width: 100%;
