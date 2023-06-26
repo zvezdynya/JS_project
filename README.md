@@ -20,7 +20,7 @@ Valentine https://github.com/zvezdynya <br/>
 Shahnoz   https://github.com/Shahnoz18 <br/>
 Olga      https://github.com/olkosti. <br/>
 Anna Saurina https://github.com/AnnaSaurina <br/>
-Veronica Obidina https://github.com/vnksobol <br/>
+Veronica https://github.com/vnksobol <br/>
 
 
 Some of the parts are still to be worked on
