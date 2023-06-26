@@ -15,7 +15,7 @@
 }
 .popup.open {
     opacity: 1;
-    visibility: visible;
+    visibility: auto;
 }
 .popup.open .popup__content {
     transform: translate(0px, 0px);
