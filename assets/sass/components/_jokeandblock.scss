@@ -1,17 +1,19 @@
 .jokeandblock {
+    font-family: $second-font;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     max-width: 100%;
     height: auto;
+    justify-content: flex-start;    
+    margin-left: 8%;
 }
 
 .joke {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     padding: 1rem;
     cursor: pointer;
@@ -38,5 +40,261 @@
 }
 
 .block {
-    @include block(column,50%,$color-basic);
+    @include block(column,60%,$color-neutral);
+}
+
+.block__item {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.block__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    max-width: 100%;
+    height: auto;
+}
+
+.block__picture {
+    max-width: 50%;
+    margin: 0rem;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .jokeandblock {
+        font-family: $second-font;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 2rem;
+        max-width: 100%;
+        height: auto;
+        justify-content: flex-start;    
+        margin: 2% 10%;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 20%;
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 0.3rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 0rem;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .block__picture {
+        max-width: 50%;
+        margin: 0rem;
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 767px) {
+    .jokeandblock {
+    font-family: $second-font;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 20%;
+        height: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 0.3rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 0rem;
+        overflow: hidden;
+    }
+
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .block__picture {
+        max-width: 50%;
+        margin: 0rem;
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 2500px) and (max-width: 5000px) {
+    .jokeandblock {
+        font-family: $second-font;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        max-width: 100%;
+        height: auto;
+        margin-left: 8%;
+    }
+    
+    .joke {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30%;
+        height: auto;
+        padding: 3rem;
+        cursor: pointer;
+    }
+    
+    .joke:hover {
+        transform: translate(0, 0.25rem);
+    }
+    
+    .joke:active {
+        transform: translate(0em, 0.75rem);
+    }
+    
+    .joke-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        position: absolute;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $color-neutral;
+    }
+    
+    .block {
+        @include block(column,97%,$color-neutral);
+        padding: 1rem;
+    }
+    
+    .block__item {    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        max-width: 96%;
+        height: auto;
+        padding: 3rem;
+        overflow: hidden;
+    }
+
+    .block__text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .block__picture {
+        max-width: 99%;
+        margin: 0rem;
+        object-fit: contain;
+    }
 }
