@@ -8,7 +8,7 @@
 Our team has developed a website with a variety of recipes for proper nutrition.
 
 You may check the website following the link <br/>
-https://github.com/zvezdynya/JS_project <br/>
+https://[github.com/zvezdynya/JS_project](https://yanakin394.github.io/JS_project/) <br/>
 
 ## Technologies used: <br/>
 HTML, CSS, SASS, BEM, JavaScript <br/>
