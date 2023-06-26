@@ -199,19 +199,18 @@ function addCardToHTML(parentContainer, card) {
 // блок основного кода
 
 hiddenSometh(wrapperRandomBlock);
-hiddenSometh(cardsBlock);
 
 // запрос в апи при загрузке страницы
 document.addEventListener("DOMContentLoaded", (e) => {
   wrapperRandomCards.innerHTML = loader;
   console.log(e.type);
   sendApiRequest(randomParamSearch, wrapperRandomCards.innerHTML, e);
-  viewSometh(cardsBlock);
 });
 
 //событие клик для поиска рецептов
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
+  viewSometh(cardsBlock);
   console.log(e.type);
   const searchRecipe = document.querySelector(".search-form__wrapper-area");
   let searchRecipeValue = searchRecipe.value;
