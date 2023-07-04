@@ -5,7 +5,7 @@
 
 *(our students 3nd project after 20 weeks of studying HTML/CSS/SASS/JS)*
 
-Our team has developed a website with a variety of recipes for proper nutrition.
+Our team has developed a website with a variety of recipes for proper nutrition. You can search recepies by typing key words in the search area or using filters. Also there is a Joke button on the page, which would show you a random joke from API every time you click on it. The design was created by our team.
 
 You may check the website following the link <br/>
 https://[github.com/zvezdynya/JS_project](https://yanakin394.github.io/JS_project/) <br/>
