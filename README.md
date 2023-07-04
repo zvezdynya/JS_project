@@ -1,6 +1,6 @@
 # Yummy - website for proper nutrition. <br/>
 <div id=“gif” align=“center”>
- <img src="assets/images/frontend.gif" class="image" width=“100”/>
+ <img src="assets/images/frontend.gif" class="image" width=“50”/>
 </div>
 
 *(our students 3nd project after 20 weeks of studying HTML/CSS/SASS/JS)*
