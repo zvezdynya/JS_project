@@ -5,6 +5,9 @@ A website with a variety of recipes for proper nutrition. You can search recepie
 <img width="700" alt="website_screenshot" src="assets/images/screenshot_for_readme2.png">
 <img width="700" alt="website_screenshot" src="assets/images/screenshot_for_readme3.png">
 
+## Getting started
+Host the parent directory on the webserver
+
 ## Technologies:
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="60" height="60"/>&nbsp;
