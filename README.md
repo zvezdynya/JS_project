@@ -1,4 +1,4 @@
-# Yummy - website for proper nutrition. <br/>
+# Yummy - a website for proper nutrition. <br/>
 A website with a variety of recipes for proper nutrition. You can search recepies by typing key words in the search area or using filters. Also there is a Joke button on the page, which would show you a random joke from API every time you click on it.
 
 <img width="700" alt="website_screenshot" src="assets/images/screenshot_for_readme1.png">
